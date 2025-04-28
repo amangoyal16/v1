@@ -32,7 +32,7 @@ export function Navbar() {
           href="/"
           className="text-2xl font-bold tracking-tight hover:opacity-80 transition-opacity"
         >
-          faizur
+          Aman Goyal
         </Link>
 
         <div className="hidden md:flex space-x-10 items-center">

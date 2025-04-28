@@ -1,38 +1,34 @@
+'use client';
 /* eslint-disable react/no-unescaped-entities */
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { SectionTitle } from '@/components/ui/section-title';
 import { Navbar } from '@/components/ui/navbar';
+import { motion } from 'framer-motion';
+import FaqSection from '@/components/FaqSection';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
       {/* Hero Section */}
-      <header className="container mx-auto px-4 py-16 md:py-24">
-        <div className="max-w-4xl mx-auto text-center">
+      <header className="container mx-auto py-16 md:py-24">
+        <div className="max-w-4xl mx-auto ">
           <div className="mb-4 animate-fade-in">
             <p className="text-xl font-medium mb-2">
-              👋 Let's create something amazing together!
+              👋 Let&apos;s create something amazing together!
             </p>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tight animate-fade-in-up">
-            Designing for{' '}
-            <span className="inline-block rotate-3 transform hover:rotate-6 transition-transform duration-300">
-              🚀
-            </span>{' '}
-            brands,
-            <span className="block mt-2">founders & experiences</span>
-            <span className="block mt-2 bg-gradient-to-r from-black to-gray-500 bg-clip-text text-transparent">
-              that inspire and connect.
-            </span>
+          <h1 className="text-6xl  font-bold mb-8 tracking-tight leading-tight animate-fade-in-up">
+            I help founders and teams turn ideas into products that grow.
           </h1>
-          <p className="text-xl mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up delay-100">
+          <p className="text-xl mb-10 max-w-3xl  leading-relaxed animate-fade-in-up delay-100">
             Since 2018, I've helped 50+ founders transform their brands across
             AI, dating, healthcare, e-commerce, fashion and more through designs
             that create meaningful connections.
           </p>
-          <div className="flex flex-wrap gap-6 mt-10 justify-center animate-fade-in-up delay-200">
+          <div className="flex flex-wrap gap-6 mt-10 animate-fade-in-up delay-200">
             <Button className="rounded-full px-10 py-6 bg-black hover:bg-black/80 text-white font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               Explore Work
             </Button>
@@ -66,8 +62,8 @@ export default function Home() {
       <section id="projects" className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex items-baseline mb-12">
-            <h2 className="text-4xl font-bold mr-2">Selected</h2>
-            <p className="text-4xl font-normal">projects</p>
+            <h2 className="text-4xl font-bold mr-2">Selected projects </h2>
+            <p className="text-4xl font-normal">Brands and Teams I've Helped</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -373,6 +369,123 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Services/Pricing Section */}
+      <section className="py-24 bg-gradient-to-b from-gray-100 to-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold mb-2 text-gray-900">
+            My pricing is simple,
+            <br />
+            <span className="font-serif font-normal text-gray-700">
+              just like my process.
+            </span>
+          </h2>
+          <div className="flex gap-4 mt-10 mb-12">
+            <button className="px-6 py-2 rounded-full font-medium bg-black text-white shadow transition">
+              Monthly
+            </button>
+            <button className="px-6 py-2 rounded-full font-medium bg-gray-300 text-gray-700 transition">
+              Fixed project
+            </button>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mt-8">
+            {/* Pricing Card */}
+            <div className="bg-gradient-to-br col-span-12 md:col-span-6 from-neutral-800 to-black text-white rounded-3xl p-10 w-full max-w-xl shadow-2xl">
+              <h3 className="text-xl font-semibold mb-4">
+                Monthly Design Partnership
+              </h3>
+              <div className="flex items-end mb-6">
+                <span className="text-4xl md:text-5xl font-bold mr-2">
+                  $8,000
+                </span>
+                <span className="text-lg mb-1">per month</span>
+              </div>
+              <p className="text-gray-300 mb-6">billed monthly</p>
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✔</span> Ongoing design
+                  support for any project
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✔</span> Flexible scope
+                  with clear timelines and deliverables
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✔</span> Fast
+                  turnarounds with 1-2 day revisions
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✔</span> Strategic
+                  kickoff call to plan your project
+                </li>
+                <li className="flex items-center">
+                  <span className="text-green-400 mr-3">✔</span> Weekly calls +
+                  private Slack
+                </li>
+              </ul>
+              <button className="bg-white text-black px-8 py-4 rounded-full font-semibold shadow hover:bg-gray-200 transition flex items-center gap-2">
+                Book a Call <span aria-hidden>→</span>
+              </button>
+            </div>
+            {/* Testimonial Carousel */}
+            <div className="col-span-12 md:col-span-6 flex-1 flex flex-col items-center lg:items-start mt-10 lg:mt-0">
+              <TestimonialCarousel />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* About Me Section */}
+      <section className="bg-black text-white py-20">
+        <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+          {/* Left: Text */}
+          <div className="col-span-12 md:col-span-5 w-full mb-10 md:mb-0">
+            <span className="text-orange-400 font-semibold uppercase tracking-wider text-sm mb-4 inline-block">
+              ✹ Meet Aman
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
+              More Than a Designer — Your Product Partner.
+            </h2>
+
+            <p className="text-gray-300 text-base leading-relaxed">
+              I'm Aman Goyal, a Product and Design Strategist with over 5 years
+              of experience helping founders and startups turn ideas into
+              high-performing products.
+              <br />
+              <br />
+              Starting as a developer and growing into a product leader, I
+              bridge the gap between strategy, design, and technology — so you
+              don't just get beautiful interfaces, you get real, scalable
+              results.
+              <br />
+              <br />
+              I've partnered with brands across AI, SaaS, fintech, and consumer
+              platforms, delivering 20+ successful projects, launching multiple
+              funded startups, and improving user engagement by over 50% across
+              key products.
+              <br />
+              <br />I believe the best products aren't just designed — they're
+              engineered for clarity, speed, and long-term growth.
+              <br />
+              <br />
+              Whether you're building your first MVP or scaling a platform, I
+              bring a clear, hands-on process to move fast, ship smart, and make
+              an impact.
+            </p>
+          </div>
+          {/* Right: Image */}
+          <div className="col-span-12 md:col-span-7 w-full flex justify-center">
+            <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-200  w-full h-full">
+              <img
+                src="/clients/ARKivist-desktop.png"
+                alt="Faizur Rehman portrait"
+                className="object-cover w-full h-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* FAQ Section */}
+      <FaqSection />
 
       {/* Footer */}
       <footer className="py-12 bg-gray-100">
