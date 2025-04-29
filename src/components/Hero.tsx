@@ -51,7 +51,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-xl text-gray-600 mb-12 max-w-3xl leading-relaxed"
           >
-            Since 2018, I&apos;ve helped 50+ founders transform their brands
+            Since 2020, I&apos;ve helped 20+ founders transform their brands
             across AI, dating, healthcare, e-commerce, fashion and more through
             designs that create meaningful connections.
           </motion.p>
@@ -95,7 +95,7 @@ export default function Hero() {
           {projectScreens.map((screen, index) => (
             <div
               key={index}
-              className="relative w-[600px] h-[400px] rounded-xl overflow-hidden shadow-2xl"
+              className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-2xl"
             >
               <Image
                 src={screen}

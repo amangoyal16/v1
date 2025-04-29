@@ -13,6 +13,7 @@ import Process from '@/components/Process';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import Services from '@/components/Services';
 import Hero from '@/components/Hero';
+import CaseStudySection from '@/components/CaseStudySection';
 
 export default function Home() {
   return (
@@ -23,6 +24,8 @@ export default function Home() {
       <ProjectShowcase />
       {/* Process Section - From Chaos to Clarity */}
       <Process />
+      {/* Case Studies Section */}
+      <CaseStudySection />
       {/* Services Section */}
       <Services />
       {/* About Me Section */}
