@@ -1,5 +1,6 @@
 'use client';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useState } from 'react';
 
 const faqs = [
   {
@@ -37,17 +38,22 @@ const faqs = [
 ];
 
 export default function FaqSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-2">
-          Frequently
-          <br />
-          asked questions
-        </h2>
-        <p className="mb-8 text-gray-600">
+        <div className="flex items-center gap-3 mb-8">
+          <span className="text-2xl">❓</span>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Frequently
+            <br />
+            asked questions
+          </h2>
+        </div>
+        <p className="mb-12 text-gray-600 text-lg">
           Still have questions?{' '}
-          <a href="#contact" className="underline">
+          <a href="#contact" className="underline hover:text-gray-900">
             Drop us a line
           </a>
         </p>
@@ -57,7 +63,7 @@ export default function FaqSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-gray-50 rounded-2xl p-10 flex flex-col items-center w-full max-w-md mb-8 lg:mb-0 shadow-md"
+            className="bg-gray-50 rounded-2xl p-10 flex flex-col items-center w-full max-w-md mb-8 lg:mb-0 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
           >
             <img
               src="/about-me.jpg"
@@ -87,20 +93,48 @@ export default function FaqSection() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-gray-100 rounded-xl"
+                  className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
                 >
-                  <details className="group">
-                    <summary className="cursor-pointer px-6 py-5 text-lg font-medium flex justify-between items-center">
-                      {item.q}
-                      <span className="ml-2">
-                        <span className="group-open:hidden">+</span>
-                        <span className="hidden group-open:inline">-</span>
-                      </span>
-                    </summary>
-                    <div className="px-6 pb-5 text-gray-600 text-base overflow-hidden">
-                      {item.a}
-                    </div>
-                  </details>
+                  <button
+                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    className="w-full text-left px-6 py-5 text-lg font-medium flex justify-between items-center hover:bg-gray-50 transition-colors duration-200 rounded-xl"
+                  >
+                    {item.q}
+                    <span className="ml-2 text-gray-400">
+                      {openIndex === idx ? (
+                        <motion.span
+                          initial={{ rotate: 0 }}
+                          animate={{ rotate: 45 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          +
+                        </motion.span>
+                      ) : (
+                        <motion.span
+                          initial={{ rotate: 45 }}
+                          animate={{ rotate: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          +
+                        </motion.span>
+                      )}
+                    </span>
+                  </button>
+                  <AnimatePresence>
+                    {openIndex === idx && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="px-6 pb-5 text-gray-600 text-base">
+                          {item.a}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </motion.li>
               ))}
             </ul>
