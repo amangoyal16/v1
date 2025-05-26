@@ -19,8 +19,8 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-4 min-h-[60vh] flex flex-col justify-center relative z-10">
-        <div className="max-w-4xl mx-auto">
+      <div className=" mx-auto px-4 min-h-[80vh] text-center flex flex-col justify-center relative z-10">
+        <div className="max-w-5xl mx-auto">
           {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,7 +49,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-600 mb-12 max-w-3xl leading-relaxed"
+            className="text-xl text-gray-600 mb-12 max-w-3xl leading-relaxed mx-auto"
           >
             Since 2020, I&apos;ve helped 20+ founders transform their brands
             across AI, dating, healthcare, e-commerce, fashion and more through
@@ -61,23 +61,23 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap gap-6"
+            className="flex flex-wrap gap-6 justify-center"
           >
-            <Button className="rounded-full px-10 py-6 bg-[#111827] hover:bg-[#1F2937] text-white font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <Button className="rounded-full  px-10 py-6 bg-[#111827] hover:bg-[#1F2937] text-white font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
               Explore Work
             </Button>
             <Button
               variant="outline"
               className="rounded-full px-10 py-6 border-2 text-lg font-medium hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1"
             >
-              Book a Call →
+              Book a Call
             </Button>
           </motion.div>
         </div>
       </div>
 
       {/* Project Screens Carousel */}
-      <div className=" h-[40vh] overflow-hidden">
+      <div className="h-[400px] w-full overflow-hidden hidden">
         <motion.div
           className="flex space-x-8"
           animate={{
@@ -95,7 +95,7 @@ export default function Hero() {
           {projectScreens.map((screen, index) => (
             <div
               key={index}
-              className="relative w-full h-[400px] rounded-xl overflow-hidden shadow-2xl"
+              className="relative w-[800px] h-[400px] rounded-xl overflow-hidden shadow-2xl"
             >
               <Image
                 src={screen}
@@ -103,7 +103,6 @@ export default function Hero() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
             </div>
           ))}
         </motion.div>

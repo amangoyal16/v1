@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
-import { Manrope } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 
-const manrope = Manrope({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600'],
 });
 
 export const metadata: Metadata = {
@@ -19,7 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={manrope.className}>{children}</body>
+      <body
+        className={`${outfit.className} min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
