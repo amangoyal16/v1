@@ -22,20 +22,20 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['var(--font-playfair)'],
+        sans: ['var(--font-inter)'],
+      },
       colors: {
+        primary: '#020525',
+        secondary: '#FBF6DB',
+        royalBlue: '#00043E',
+        royalSky: '#080DCC',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))',

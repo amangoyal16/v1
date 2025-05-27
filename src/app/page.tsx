@@ -9,7 +9,7 @@ import FaqSection from '@/components/FaqSection';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import Footer from '@/components/Footer';
 import AboutMe from '@/components/AboutMe';
-import Process from '@/components/Process';
+import Pricing from '@/components/Pricing';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import Services from '@/components/Services';
 import Hero from '@/components/Hero';
@@ -17,22 +17,20 @@ import CaseStudySection from '@/components/CaseStudySection';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navbar />
+    <div className="min-h-screen ">
+      <div
+        className="absolute inset-0 w-full h-full scale-[1.2] transform opacity-10 [mask-image:radial-gradient(#fff,transparent,75%)]"
+        style={{
+          backgroundImage: 'url(/noise.webp)',
+          backgroundSize: '30%',
+        }}
+      ></div>
       <Hero />
-      {/* Project Showcase */}
-      <ProjectShowcase />
-      {/* Process Section - From Chaos to Clarity */}
-      <Process />
-      {/* Case Studies Section */}
-      <CaseStudySection />
-      {/* Services Section */}
-      <Services />
-      {/* About Me Section */}
       <AboutMe />
-      {/* FAQ Section */}
+      <ProjectShowcase />
+      <Pricing />
+      <TestimonialCarousel />
       <FaqSection />
-      {/* Footer */}
       <Footer />
     </div>
   );

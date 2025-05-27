@@ -1,54 +1,74 @@
 'use client';
 
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+
 export default function AboutMe() {
   return (
-    <section className="bg-black text-white py-20">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-12 items-center gap-12">
+    <section className="max-w-2xl mx-auto mt-32">
+      <div className="container mx-auto px-4 items-center gap-12">
         {/* Left: Text */}
-        <div className="col-span-12 md:col-span-5 w-full mb-10 md:mb-0">
-          <span className="text-orange-400 font-semibold uppercase tracking-wider text-sm mb-4 inline-block">
-            ✹ Meet Aman
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight text-white">
-            More Than a Designer — Your Product Partner.
-          </h2>
 
-          <p className="text-gray-300 text-base leading-relaxed">
-            I'm Aman Goyal, a Product and Design Strategist with over 5 years of
-            experience helping founders and startups turn ideas into
-            high-performing products.
-            <br />
-            <br />
-            Starting as a developer and growing into a product leader, I bridge
-            the gap between strategy, design, and technology — so you don't just
-            get beautiful interfaces, you get real, scalable results.
-            <br />
-            <br />
-            I've partnered with brands across AI, SaaS, fintech, and consumer
-            platforms, delivering 20+ successful projects, launching multiple
-            funded startups, and improving user engagement by over 50% across
-            key products.
-            <br />
-            <br />I believe the best products aren't just designed — they're
-            engineered for clarity, speed, and long-term growth.
-            <br />
-            <br />
-            Whether you're building your first MVP or scaling a platform, I
-            bring a clear, hands-on process to move fast, ship smart, and make
-            an impact.
-          </p>
-        </div>
-        {/* Right: Image */}
-        <div className="col-span-12 md:col-span-7 w-full flex justify-center">
-          <div className="rounded-xl overflow-hidden shadow-2xl bg-gray-200  w-full h-full">
-            <img
-              src="/clients/ARKivist-desktop.png"
-              alt="Aman Goyal Rehman portrait"
-              className="object-cover w-full h-full"
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 ">About Me</h2>
+        {/* Supporting Text */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          I’m Aman. I help high-velocity founders go from idea to live product,
+          faster than most teams finish a pitch deck.
+          <br />
+          <br />
+          Over the past 5 years, I’ve worked with 20+ startups to design,
+          prototype, and ship real products — some of which went on to raise,
+          scale, and show up in Forbes and Google I/O.
+          <br />
+          <br />
+          No fluff. No junior handoffs. Just sharp product thinking,
+          founder-speed execution, and actual results.
+        </motion.p>
+      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.8 }}
+        className="mt-12"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="relative">
+            <Image
+              src="/project-mockup/ARKivist-desktop.png"
+              alt="ARKivist Desktop Screenshot"
+              width={1200}
+              height={300}
+              className="rounded-lg shadow-lg min-h-[500px] object-cover"
+              priority
             />
+            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-primary to-transparent rounded-b-lg" />
+            <p className="absolute bottom-8 left-8 right-8 text-secondary text-lg font-medium">
+              I turn raw ideas into products users get, love, and stick with —
+              without dragging you through 12-week discovery phases or pretty
+              decks that don&apos;t ship.
+            </p>
+          </div>
+          <div className="relative">
+            <Image
+              src="/project-mockup/Jeeves.png"
+              alt="Jeeves Project Screenshot"
+              width={1200}
+              height={300}
+              className="rounded-lg shadow-lg min-h-[500px] object-cover"
+              priority
+            />
+            <div className="absolute bottom-0 left-0 right-0 h-full bg-gradient-to-t from-primary to-transparent rounded-b-lg" />
+            <p className="absolute bottom-8 left-8 right-8 text-secondary text-lg font-medium">
+              From concept to launch in weeks, not months. Fast, focused, and
+              results-driven product development that moves at startup speed.
+            </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

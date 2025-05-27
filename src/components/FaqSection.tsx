@@ -1,6 +1,7 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { IconChevronDown } from '@tabler/icons-react';
 
 const faqs = [
   {
@@ -29,7 +30,7 @@ const faqs = [
   },
   {
     q: 'How do we start working together?',
-    a: "It starts with a discovery call — a 15-minute conversation to understand your goals, timelines, and needs. From there, I'll recommend a plan that suits your stage and objectives.",
+    a: "It starts with a discovery call — a 30-minute conversation to understand your goals, timelines, and needs. From there, I'll recommend a plan that suits your stage and objectives.",
   },
   {
     q: 'Do you offer post-launch support?',
@@ -41,106 +42,57 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center gap-3 mb-8">
-          <span className="text-2xl">❓</span>
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Frequently
-            <br />
-            asked questions
-          </h2>
-        </div>
-        <p className="mb-12 text-gray-600 text-lg">
-          Still have questions?{' '}
-          <a href="#contact" className="underline hover:text-gray-900">
-            Drop us a line
-          </a>
-        </p>
-        <div className="flex flex-col lg:flex-row gap-10 items-start">
-          {/* Left: Call to Action Card */}
+    <section className="max-w-2xl mx-auto mt-32">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="text-4xl md:text-5xl font-bold mb-8 tracking-tight leading-[1.1]"
+      >
+        Frequently Asked Questions
+      </motion.h2>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="space-y-4"
+      >
+        {faqs.map((faq, index) => (
           <motion.div
+            key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-gray-50 rounded-2xl p-10 flex flex-col items-center w-full max-w-md mb-8 lg:mb-0 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
+            transition={{ duration: 0.6, delay: 0.2 * index }}
+            className="  overflow-hidden"
           >
-            <img
-              src="/about-me.jpg"
-              alt="Avatar"
-              className="w-16 h-16 rounded-full mb-4 object-cover"
-            />
-            <h3 className="text-2xl font-semibold mb-2 text-center">
-              Short on time?
-            </h3>
-            <p className="text-gray-600 mb-6 text-center">
-              Let&apos;s get started with a brief intro call.
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-black text-white px-6 py-3 rounded-full font-medium shadow hover:bg-gray-900 transition flex items-center gap-2"
+            <button
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="w-full px-6 py-4 text-left flex justify-between items-center bg-royalBlue/20 rounded-lg transition-colors"
             >
-              Book a Call <span aria-hidden>→</span>
-            </motion.button>
-          </motion.div>
-          {/* Right: FAQ Accordions */}
-          <div className="flex-1 w-full">
-            <ul className="space-y-4">
-              {faqs.map((item, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-white rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100"
+              <span className="text-lg ">{faq.q}</span>
+              <IconChevronDown
+                className={`w-5 h-5 transition-transform ${
+                  openIndex === index ? 'rotate-180' : ''
+                }`}
+              />
+            </button>
+            <AnimatePresence>
+              {openIndex === index && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{ height: 0, opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-6 py-4 bg-royalSky/10"
                 >
-                  <button
-                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
-                    className="w-full text-left px-6 py-5 text-lg font-medium flex justify-between items-center hover:bg-gray-50 transition-colors duration-200 rounded-xl"
-                  >
-                    {item.q}
-                    <span className="ml-2 text-gray-400">
-                      {openIndex === idx ? (
-                        <motion.span
-                          initial={{ rotate: 0 }}
-                          animate={{ rotate: 45 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          +
-                        </motion.span>
-                      ) : (
-                        <motion.span
-                          initial={{ rotate: 45 }}
-                          animate={{ rotate: 0 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          +
-                        </motion.span>
-                      )}
-                    </span>
-                  </button>
-                  <AnimatePresence>
-                    {openIndex === idx && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="px-6 pb-5 text-gray-600 text-base">
-                          {item.a}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
+                  <p className="text-secondary/80 ">{faq.a}</p>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
+        ))}
+      </motion.div>
     </section>
   );
 }

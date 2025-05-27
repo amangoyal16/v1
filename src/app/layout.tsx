@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
-import { Outfit } from 'next/font/google';
+import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 
-const outfit = Outfit({
+const playfair = Playfair_Display({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
+  variable: '--font-playfair',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 export const metadata: Metadata = {
@@ -20,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} min-h-screen bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500`}
+        className={`${playfair.variable} ${inter.variable}   font-sans bg-gradient-to-tl from-primary to-royalSky`}
       >
         {children}
       </body>
