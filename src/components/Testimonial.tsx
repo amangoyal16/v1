@@ -50,50 +50,6 @@ const testimonials = [
   },
 ];
 
-const pressLogos = [
-  {
-    name: 'Forbes',
-    logo: '/press/forbes.svg',
-    projectName: 'ARKivist',
-    hyperlink:
-      'https://www.forbes.com/sites/zengernews/2023/09/12/fashion-clutches-technology-at-new-york-fashion-week-nolcha-shows-at-mercedes-benz-manhattan/?sh=608fdd4a6b54',
-  },
-  {
-    name: 'Google',
-    logo: '/press/googleio.svg',
-    projectName: 'Arora',
-    hyperlink:
-      'https://www.youtube.com/watch?t=816&v=kjo40RHSQ4k&feature=youtu.be',
-  },
-  {
-    name: 'Coinbase',
-    logo: '/press/coinbase.svg',
-    projectName: 'Pollinate',
-    hyperlink: 'https://twitter.com/coinbase/status/1455697165473304577',
-  },
-  {
-    name: 'Hypebeast',
-    logo: '/press/hypebeast.svg',
-    projectName: 'Pollinate',
-    hyperlink:
-      'https://hypebeast.com/2021/10/nft-magazine-crypto-art-fair-info',
-  },
-  {
-    name: 'Yahoo',
-    logo: '/press/yahoo.svg',
-    projectName: 'Pollinate',
-    hyperlink:
-      'https://www.yahoo.com/now/unrevealed-host-york-fashion-week-193600313.html',
-  },
-  {
-    name: 'PBS',
-    logo: '/press/pbs.svg',
-    projectName: 'Pollinate',
-    hyperlink:
-      'https://www.pbs.org/video/augmented-reality-animation-at-queens-world-film-festival-qpj8o8/',
-  },
-];
-
 export default function Testimonial() {
   return (
     <div className="container text-center" id="testimonials">
@@ -138,25 +94,6 @@ export default function Testimonial() {
         </div>
       </div>
       <p className="text-sm text-gray-500 mt-4">Trusted by 40+ Founders</p>
-
-      <div className="flex items-center justify-center gap-12">
-        {pressLogos.map((press, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: idx * 0.1 }}
-          >
-            <Image
-              src={press.logo}
-              alt={press.name}
-              width={120}
-              height={40}
-              className="grayscale opacity-60 hover:opacity-100 transition-opacity duration-300 invert"
-            />
-          </motion.div>
-        ))}
-      </div>
     </div>
   );
 }

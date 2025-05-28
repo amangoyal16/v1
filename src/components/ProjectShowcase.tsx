@@ -1,9 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Carousel } from './ui/Carousel';
-import { Button } from './ui/button';
-import { ProjectCardView } from './ui/ProjectCardView';
-
+import { IconCaretRightFilled } from '@tabler/icons-react';
 const projects = [
   {
     title:
@@ -34,7 +31,9 @@ export default function ProjectShowcase() {
     <>
       <div className="container mt-32 overflow-hidden">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
-          What I&apos;ve Actually Done:
+          Experts in Websites,
+          <br />
+          Product, & Development
         </h2>
         <p className="text-lg  mb-4 text-secondary/50">
           Helped 20+ founders launch V1s that landed funding, press, or real
@@ -42,29 +41,26 @@ export default function ProjectShowcase() {
           design had to deliver business results
         </p>
       </div>
-      <div className="w-full py-12">
-        <Carousel slides={projects} />
-        {/* <ProjectCardView /> */}
-      </div>
 
-      <div className="flex justify-center">
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-wrap gap-6 mt-6"
-        >
-          <Button className="rounded-full bg-primary text-white font-medium text-lg">
-            Let&apos;s Build This Thing
-          </Button>
-          <Button
-            variant="secondary"
-            className="rounded-full text-lg font-medium text-primary"
+      <div className="container mt-8 flex flex-wrap gap-4">
+        {[
+          { label: 'Product Design', sub: 'View Examples' },
+          { label: 'Product Design', sub: 'View Examples' },
+          { label: 'Development', sub: 'View Examples' },
+        ].map((item) => (
+          <div
+            key={item.label}
+            className="bg-royalBlue rounded-xl px-6 py-4 min-w-[200px] flex-1 max-w-xs flex flex-col justify-between shadow-sm border border-white/5"
           >
-            Show Me How
-          </Button>
-        </motion.div>
+            <div className="text-base font-medium text-white mb-2">
+              {item.label}
+            </div>
+            <div className="flex items-center text-sm text-secondary/70 font-normal">
+              {item.sub}
+              <IconCaretRightFilled className="w-4 h-4" />
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfair.variable} ${inter.variable}   font-sans bg-gradient-to-tl from-primary to-royalSky`}
+        className={`${playfair.variable} ${inter.variable}   font-sans bg-gradient-to-tl from-primary to-primary/50`}
       >
         {children}
       </body>
