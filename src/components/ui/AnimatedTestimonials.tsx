@@ -40,8 +40,10 @@ export const AnimatedTestimonials = ({
     }
   }, [autoplay]);
 
-  const randomRotateY = () => {
-    return Math.floor(Math.random() * 21) - 10;
+  // Fixed rotation values for each card
+  const getRotation = (index: number) => {
+    const rotations = [4, -5, 5, 9, 8, -7];
+    return rotations[index % rotations.length];
   };
 
   return (
@@ -53,7 +55,7 @@ export const AnimatedTestimonials = ({
         <IconArrowLeft className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" />
       </button>
 
-      <div className="relative h-[500px] flex-1  mx-auto text-left">
+      <div className="relative h-[500px] flex-1 mx-auto text-left">
         <AnimatePresence>
           {testimonials.map((testimonial, index) => (
             <motion.div
@@ -62,13 +64,13 @@ export const AnimatedTestimonials = ({
                 opacity: 0,
                 scale: 0.9,
                 z: -100,
-                rotate: randomRotateY(),
+                rotate: getRotation(index),
               }}
               animate={{
                 opacity: isActive(index) ? 1 : 0.7,
                 scale: isActive(index) ? 1 : 0.95,
                 z: isActive(index) ? 0 : -100,
-                rotate: isActive(index) ? 0 : randomRotateY(),
+                rotate: isActive(index) ? 0 : getRotation(index),
                 zIndex: isActive(index) ? 40 : testimonials.length + 2 - index,
                 y: isActive(index) ? [0, -80, 0] : 0,
               }}
@@ -76,7 +78,7 @@ export const AnimatedTestimonials = ({
                 opacity: 0,
                 scale: 0.9,
                 z: 100,
-                rotate: randomRotateY(),
+                rotate: getRotation(index),
               }}
               transition={{
                 duration: 0.4,
@@ -118,7 +120,7 @@ export const AnimatedTestimonials = ({
 
       <button
         onClick={handleNext}
-        className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 absolute top-1/2 -right-20 "
+        className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800 absolute top-1/2 -right-20"
       >
         <IconArrowRight className="h-5 w-5 text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" />
       </button>

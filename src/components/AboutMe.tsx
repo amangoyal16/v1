@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export default function AboutMe() {
   return (
-    <section className="max-w-2xl mx-auto mt-32">
-      <div className="container mx-auto px-4 items-center gap-12">
+    <section className=" container mt-32">
+      <div className="px-4 items-center gap-12">
         {/* Left: Text */}
 
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">About Me</h2>
@@ -15,12 +15,13 @@ export default function AboutMe() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-secondary/60"
         >
-          I’m Aman. I help high-velocity founders go from idea to live product,
-          faster than most teams finish a pitch deck.
+          I&apos;m Aman. I help high-velocity founders go from idea to live
+          product, faster than most teams finish a pitch deck.
           <br />
           <br />
-          Over the past 5 years, I’ve worked with 20+ startups to design,
+          Over the past 5 years, I&apos;ve worked with 20+ startups to design,
           prototype, and ship real products — some of which went on to raise,
           scale, and show up in Forbes and Google I/O.
           <br />

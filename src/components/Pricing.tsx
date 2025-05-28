@@ -55,7 +55,7 @@ export default function Pricing() {
 
   return (
     <>
-      <section className="max-w-2xl mx-auto mt-32">
+      <section className="container mt-32">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -70,7 +70,8 @@ export default function Pricing() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          I offer a range of services to help you build your product.
+          Clear outcomes, no fluff. Choose the service that fits your next big
+          move.
         </motion.p>
 
         <div className="relative">

@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
-import { AnimatedTestimonials } from './AnimatedTestimonials';
+import { AnimatedTestimonials } from './ui/AnimatedTestimonials';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -49,9 +50,53 @@ const testimonials = [
   },
 ];
 
-export default function TestimonialCarousel() {
+const pressLogos = [
+  {
+    name: 'Forbes',
+    logo: '/press/forbes.svg',
+    projectName: 'ARKivist',
+    hyperlink:
+      'https://www.forbes.com/sites/zengernews/2023/09/12/fashion-clutches-technology-at-new-york-fashion-week-nolcha-shows-at-mercedes-benz-manhattan/?sh=608fdd4a6b54',
+  },
+  {
+    name: 'Google',
+    logo: '/press/googleio.svg',
+    projectName: 'Arora',
+    hyperlink:
+      'https://www.youtube.com/watch?t=816&v=kjo40RHSQ4k&feature=youtu.be',
+  },
+  {
+    name: 'Coinbase',
+    logo: '/press/coinbase.svg',
+    projectName: 'Pollinate',
+    hyperlink: 'https://twitter.com/coinbase/status/1455697165473304577',
+  },
+  {
+    name: 'Hypebeast',
+    logo: '/press/hypebeast.svg',
+    projectName: 'Pollinate',
+    hyperlink:
+      'https://hypebeast.com/2021/10/nft-magazine-crypto-art-fair-info',
+  },
+  {
+    name: 'Yahoo',
+    logo: '/press/yahoo.svg',
+    projectName: 'Pollinate',
+    hyperlink:
+      'https://www.yahoo.com/now/unrevealed-host-york-fashion-week-193600313.html',
+  },
+  {
+    name: 'PBS',
+    logo: '/press/pbs.svg',
+    projectName: 'Pollinate',
+    hyperlink:
+      'https://www.pbs.org/video/augmented-reality-animation-at-queens-world-film-festival-qpj8o8/',
+  },
+];
+
+export default function Testimonial() {
   return (
-    <div className="max-w-2xl mx-auto text-center">
+    <div className="container text-center" id="testimonials">
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -60,7 +105,6 @@ export default function TestimonialCarousel() {
       >
         Testimonials
       </motion.h1>
-
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -68,8 +112,51 @@ export default function TestimonialCarousel() {
       >
         What people say about me
       </motion.p>
-
       <AnimatedTestimonials testimonials={testimonials} autoplay={true} />
+      <div className="flex justify-center items-center mt-8">
+        <div className="flex items-center -space-x-4">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative w-16 h-16 rounded-full border-2 border-white  overflow-hidden"
+              style={{
+                zIndex: testimonials.length - index,
+                marginLeft: index === 0 ? '0' : '-1.5rem',
+              }}
+            >
+              <img
+                src={testimonial.src}
+                alt={testimonial.name}
+                className="w-full h-full object-cover"
+              />
+              <span className="absolute inset-0 rounded-full border-2 border-royalBlue/40 pointer-events-none"></span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+      <p className="text-sm text-gray-500 mt-4">Trusted by 40+ Founders</p>
+
+      <div className="flex items-center justify-center gap-12">
+        {pressLogos.map((press, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+          >
+            <Image
+              src={press.logo}
+              alt={press.name}
+              width={120}
+              height={40}
+              className="grayscale opacity-60 hover:opacity-100 transition-opacity duration-300 invert"
+            />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }

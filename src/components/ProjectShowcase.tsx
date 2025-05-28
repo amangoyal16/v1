@@ -1,7 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Carousel } from './Carousel';
+import { Carousel } from './ui/Carousel';
 import { Button } from './ui/button';
+import { ProjectCardView } from './ui/ProjectCardView';
 
 const projects = [
   {
@@ -31,7 +32,7 @@ const projects = [
 export default function ProjectShowcase() {
   return (
     <>
-      <div className="max-w-2xl mx-auto mt-32 overflow-hidden">
+      <div className="container mt-32 overflow-hidden">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
           What I&apos;ve Actually Done:
         </h2>
@@ -43,9 +44,10 @@ export default function ProjectShowcase() {
       </div>
       <div className="w-full py-12">
         <Carousel slides={projects} />
+        {/* <ProjectCardView /> */}
       </div>
 
-      <div className="max-w-2xl mx-auto flex justify-center">
+      <div className="flex justify-center">
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
