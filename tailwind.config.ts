@@ -23,14 +23,21 @@ const config = {
     },
     extend: {
       fontFamily: {
-        heading: ['var(--font-playfair)'],
-        sans: ['var(--font-inter)'],
+        sans: [
+          'var(--font-inter)',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+        ],
       },
       colors: {
-        primary: '#020525',
-        secondary: '#FBF6DB',
-        royalBlue: '#00043E',
-        royalSky: '#080DCC',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
