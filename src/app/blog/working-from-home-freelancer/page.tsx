@@ -1,231 +1,185 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
+import { usePageAnimation, fadeInUp, fadeIn } from '@/hooks/usePageAnimation';
+import { ArrowUpRightIcon, BackArrowIcon } from '@/components/Icons';
 
-export default function BlogPostPage() {
+export default function WorkingFromHomeFreelancerPage() {
+  const isLoaded = usePageAnimation();
+
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="container mx-auto px-6 py-8 max-w-2xl">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 mb-8 animate-slideUp"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    <div className="min-h-screen bg-white max-w-3xl mx-auto">
+      <main
+        className={`container mx-auto px-6 py-16 max-w-4xl ${fadeInUp(
+          isLoaded
+        )}`}
+      >
+        {/* Back Button */}
+        <div className={fadeIn(isLoaded)} style={{ transitionDelay: '100ms' }}>
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-8"
           >
-            <path
-              d="M19 12H5M12 19L5 12L12 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          Back to Blog
-        </Link>
-      </header>
-
-      {/* Main Content */}
-      <main className="container mx-auto px-6 pb-16 max-w-2xl">
-        {/* Article Header */}
-        <div
-          className="mb-12 animate-slideUp"
-          style={{ animationDelay: '0.1s' }}
-        >
-          <time className="text-sm font-medium text-gray-500 tracking-wider uppercase mb-6 block">
-            MAR 24, 2025
-          </time>
-          <h1 className="text-4xl font-medium text-gray-900 leading-tight mb-6">
-            Working from Home as a Freelancer: The Real Story
-          </h1>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Working from home as a freelance designer sounds dreamy—but the
-            reality is a mix of freedom, focus, and unexpected challenges. This
-            post shares the honest ups and downs, helpful routines, and lessons
-            learned from building a solo creative practice at home.
-          </p>
+            <BackArrowIcon width="16" height="16" />
+            Back to Home
+          </Link>
         </div>
 
-        {/* Article Content */}
-        <div
-          className="prose prose-lg max-w-none animate-slideUp"
-          style={{ animationDelay: '0.2s' }}
+        {/* Article Header */}
+        <header
+          className={`mb-16 ${fadeInUp(isLoaded)}`}
+          style={{ transitionDelay: '200ms' }}
         >
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            When I first started freelancing from home, I thought I had it all
-            figured out. No commute, no office politics, complete control over
-            my schedule—what could go wrong? Well, as it turns out, quite a lot.
-          </p>
+          <div className="mb-6">
+            <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
+              <time>MAR 24, 2025</time>
+              <span>•</span>
+              <span>5 min read</span>
+              <span>•</span>
+              <span className="bg-blue-100 text-blue-700 px-2 py-1 rounded-full text-xs font-medium">
+                Freelancing
+              </span>
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
+              Working from Home as a Freelancer: The Real Story
+            </h1>
+            <p className="text-xl text-gray-600 leading-relaxed">
+              Working from home as a freelance designer sounds dreamy—but the
+              reality is a mix of freedom, focus, and unexpected challenges.
+            </p>
+          </div>
+        </header>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The reality of working from home as a freelance designer is far more
-            nuanced than the Instagram posts and productivity blogs would have
-            you believe. It&apos;s a journey filled with unexpected challenges,
-            surprising discoveries, and hard-earned lessons.
+        {/* Article Content */}
+        <article
+          className={`prose prose-lg max-w-none ${fadeInUp(isLoaded)}`}
+          style={{ transitionDelay: '300ms' }}
+        >
+          <p className="text-lg text-gray-700 leading-relaxed mb-8">
+            When I first started freelancing as a product designer, the idea of
+            working from home felt like the ultimate dream. No commute, no
+            office politics, complete control over my schedule. After three
+            years of remote freelancing, I can tell you that while it&apos;s
+            incredibly rewarding, it&apos;s not quite the Instagram-worthy
+            lifestyle you might imagine.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">
-            The Freedom Paradox
+            The Good: Freedom and Flexibility
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The biggest selling point of freelancing—complete freedom—can also
-            be its biggest challenge. When you can work anytime, anywhere, it
-            becomes surprisingly difficult to know when to start and when to
-            stop.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Let&apos;s start with the positives, because there are many. Working
+            from home as a freelancer gives you unparalleled flexibility. You
+            can structure your day around your natural energy levels, take
+            breaks when you need them, and work in an environment that&apos;s
+            truly comfortable for you.
           </p>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            I found myself working at all hours, checking emails during dinner,
-            and feeling guilty whenever I wasn&apos;t being
-            &quot;productive.&quot; The boundaries between work and life
-            didn&apos;t just blur—they completely disappeared.
+          <p className="text-gray-700 leading-relaxed mb-6">
+            I&apos;ve found that I&apos;m most creative in the early morning, so
+            I block out 6-10 AM for deep design work. Try doing that in a
+            traditional office! This flexibility has allowed me to produce my
+            best work and maintain a healthier work-life balance.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">
-            Building Sustainable Routines
+            The Challenging: Isolation and Distractions
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            After months of chaos, I realized that freedom without structure is
-            just another form of prison. Here&apos;s what actually works:
+          <p className="text-gray-700 leading-relaxed mb-6">
+            But it&apos;s not all perfect. Working from home can be incredibly
+            isolating, especially when you&apos;re used to the energy of a
+            collaborative office environment. Some days, the only human
+            interaction I have is with the delivery person at my door.
           </p>
 
-          <ul className="list-disc pl-6 mb-6 space-y-2">
-            <li className="text-lg text-gray-700">
-              Start and end your day at consistent times
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Then there are the distractions. That pile of laundry, the dishes in
+            the sink, the neighbor&apos;s dog that won&apos;t stop barking. It
+            takes serious discipline to maintain focus when your home is also
+            your office.
+          </p>
+
+          <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">
+            What I&apos;ve Learned
+          </h2>
+
+          <p className="text-gray-700 leading-relaxed mb-6">
+            Here are the key strategies that have helped me thrive as a
+            work-from-home freelancer:
+          </p>
+
+          <ul className="list-disc pl-6 text-gray-700 mb-8 space-y-2">
+            <li>
+              <strong>Create boundaries:</strong> I have a dedicated workspace
+              that&apos;s separate from my living area. When I&apos;m in that
+              space, I&apos;m in work mode.
             </li>
-            <li className="text-lg text-gray-700">
-              Create a dedicated workspace, even if it&apos;s just a corner of
-              your room
+            <li>
+              <strong>Stick to a routine:</strong> I start work at the same time
+              every day and have consistent morning and evening routines.
             </li>
-            <li className="text-lg text-gray-700">
-              Take real breaks—step away from the screen
+            <li>
+              <strong>Schedule social time:</strong> I make sure to schedule
+              regular coffee meetings, co-working sessions, or video calls with
+              other freelancers.
             </li>
-            <li className="text-lg text-gray-700">
-              Communicate your boundaries clearly to clients
+            <li>
+              <strong>Invest in your setup:</strong> A good chair, proper
+              lighting, and quality monitors aren&apos;t luxuries—they&apos;re
+              necessities.
             </li>
           </ul>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The key insight? You need to become your own boss in the truest
-            sense—not just in terms of finding work, but in creating the
-            structure that helps you thrive.
-          </p>
-
-          <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">
-            The Loneliness Factor
-          </h2>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Nobody talks about how isolating freelancing can be. The casual
-            conversations by the coffee machine, the spontaneous brainstorming
-            sessions, the simple human connection of working alongside
-            others—you don&apos;t realize how much you miss these until
-            they&apos;re gone.
-          </p>
-
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            I&apos;ve learned to be intentional about connection. Regular video
-            calls with other freelancers, working from coffee shops
-            occasionally, and joining online communities have become essential
-            parts of my routine.
-          </p>
 
           <h2 className="text-2xl font-semibold text-gray-900 mt-12 mb-6">
             The Bottom Line
           </h2>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Working from home as a freelancer isn&apos;t the effortless dream
-            that social media portrays, but it&apos;s not a nightmare either.
-            It&apos;s a skill that requires practice, patience, and constant
-            adjustment.
+          <p className="text-gray-700 leading-relaxed mb-8">
+            Working from home as a freelancer is challenging, but it&apos;s also
+            one of the most rewarding ways to work. It requires discipline, good
+            systems, and a willingness to constantly adapt. But if you can make
+            it work, the freedom and flexibility are unmatched.
           </p>
 
-          <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            The freedom is real, but so is the responsibility that comes with
-            it. The flexibility is incredible, but it requires discipline to
-            make it work. Most importantly, the journey is deeply personal—what
-            works for others might not work for you, and that&apos;s perfectly
-            okay.
+          <p className="text-gray-700 leading-relaxed">
+            If you&apos;re considering making the jump to freelancing from home,
+            my advice is simple: start small, build good habits, and don&apos;t
+            be afraid to experiment until you find what works for you.
           </p>
+        </article>
 
-          <p className="text-lg text-gray-700 leading-relaxed">
-            If you&apos;re considering making the leap or struggling with your
-            current setup, remember: it&apos;s okay to experiment, fail, and try
-            again. The perfect routine doesn&apos;t exist, but a routine that
-            works for you absolutely does.
-          </p>
-        </div>
-
-        {/* Call to Action */}
-        <div
-          className="mt-16 pt-8 border-t border-gray-200 animate-slideUp"
-          style={{ animationDelay: '0.3s' }}
+        {/* Article Footer */}
+        <footer
+          className={`mt-16 pt-8 border-t border-gray-200 ${fadeInUp(
+            isLoaded
+          )}`}
+          style={{ transitionDelay: '400ms' }}
         >
-          <h3 className="text-xl font-medium text-gray-900 mb-4">
-            Want to work together?
-          </h3>
-          <p className="text-gray-600 mb-6">
-            If you&apos;re building a product and need design help, I&apos;d
-            love to hear about your project.
-          </p>
-          <div className="flex gap-4">
-            <Link
-              href="/contact"
-              className="bg-black text-white px-6 py-3 rounded-full text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 flex items-center gap-2 group"
-            >
-              Let&apos;s Work Together
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="group-hover:translate-x-1 transition-transform duration-300"
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm text-gray-600 mb-2">Written by</p>
+              <p className="font-medium text-gray-900">Aman Goyal</p>
+            </div>
+            <div className="flex gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
               >
-                <path
-                  d="M7 17L17 7M17 7H7M17 7V17"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Link>
-            <Link
-              href="/blog"
-              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105"
-            >
-              Read More Articles
-            </Link>
+                Get in Touch
+                <ArrowUpRightIcon width="16" height="16" />
+              </Link>
+              <Link
+                href="/blog"
+                className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 py-3 rounded-full text-sm font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300"
+              >
+                More Articles
+              </Link>
+            </div>
           </div>
-        </div>
+        </footer>
       </main>
-
-      <style jsx>{`
-        @keyframes slideUp {
-          from {
-            opacity: 0;
-            transform: translateY(30px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .animate-slideUp {
-          animation: slideUp 0.6s ease-out both;
-        }
-      `}</style>
     </div>
   );
 }

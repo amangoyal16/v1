@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CheckmarkIcon } from '@/components/Icons';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -48,51 +49,8 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white animate-fadeIn">
-      {/* Header */}
-      <header className="container mx-auto px-6 py-8 max-w-2xl">
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors duration-300 mb-8"
-        >
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M19 12H5M12 19L5 12L12 5"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          Back to Home
-        </Link>
-      </header>
-
       {/* Main Content */}
-      <main className="container mx-auto px-6 pb-16 max-w-2xl">
-        {/* Profile Section */}
-        <div className="flex items-start gap-6 mb-12 animate-slideUp">
-          {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <div className="w-14 h-14 rounded-full bg-gray-200 flex items-center justify-center">
-              <span className="text-lg font-semibold text-gray-600">SV</span>
-            </div>
-          </div>
-
-          {/* Profile Info */}
-          <div>
-            <h1 className="text-lg font-semibold text-gray-900 mb-1">
-              Aman Goyal
-            </h1>
-            <p className="text-base text-gray-600">Senior Product Designer</p>
-          </div>
-        </div>
-
+      <main className="container mx-auto px-6 py-16 max-w-2xl">
         {/* Section Header */}
         <div
           className="mb-12 animate-slideUp"
@@ -212,17 +170,11 @@ export default function ContactPage() {
                       }`}
                     >
                       {formData.projectCategory.includes(category) && (
-                        <svg
-                          className="w-3 h-3 text-white absolute top-0.5 left-0.5"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                        >
-                          <path
-                            fillRule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clipRule="evenodd"
-                          />
-                        </svg>
+                        <CheckmarkIcon
+                          width="12"
+                          height="12"
+                          className="text-white absolute top-0.5 left-0.5"
+                        />
                       )}
                     </div>
                   </div>
