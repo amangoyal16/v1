@@ -23,12 +23,16 @@ import FoundersImages from '@/components/FoundersImages';
 import Products from '@/components/Products';
 import Blog from '@/components/Blog';
 import ProjectsGrid from '@/components/ProjectsGrid';
+import ClientLogosCarousel from '@/components/ClientLogosCarousel';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
       <Hero />
+
+      {/* Client Logos Carousel */}
+      <ClientLogosCarousel />
 
       {/* Projects Section */}
       <ProjectsGrid maxProjects={4} />

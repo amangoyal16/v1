@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const isLoaded = usePageAnimation();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen max-w-3xl mx-auto bg-white">
       {/* Back Button */}
       <div
         className={`container mx-auto px-6 pt-16 max-w-3xl ${fadeIn(isLoaded)}`}

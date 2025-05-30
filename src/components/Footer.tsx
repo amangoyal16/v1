@@ -59,7 +59,7 @@ export default function Footer() {
 
           {/* X / Twitter */}
           <a
-            href="https://x.com/aman_goyal___"
+            href="https://x.com/amangoyal676"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between group hover:bg-gray-50 -mx-4 px-4 py-3 rounded-lg transition-all duration-300 group-hover/social:opacity-100 group-hover/social:[&:not(:hover)]:opacity-40"
@@ -103,7 +103,7 @@ export default function Footer() {
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/amangoyal-xyz/"
+            href="https://www.linkedin.com/in/amangoyal676/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between group hover:bg-gray-50 -mx-4 px-4 py-3 rounded-lg transition-all duration-300 group-hover/social:opacity-100 group-hover/social:[&:not(:hover)]:opacity-40"
@@ -127,7 +127,7 @@ export default function Footer() {
 
           {/* Peerlist */}
           <a
-            href="https://peerlist.io/aman_goyal"
+            href="https://peerlist.io/amangoyal676"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-between group hover:bg-gray-50 -mx-4 px-4 py-3 rounded-lg transition-all duration-300 group-hover/social:opacity-100 group-hover/social:[&:not(:hover)]:opacity-40"

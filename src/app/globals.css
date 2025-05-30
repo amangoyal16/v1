@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Client Logos Carousel Animation */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-infinite {
+  animation: scroll-infinite 20s linear infinite;
+}
+
+.animate-scroll-infinite:hover {
+  animation-play-state: paused;
+}
+
+/* Smooth animations for better performance */
+.animate-scroll-infinite {
+  will-change: transform;
+}
+
 @layer components {
   .container {
     @apply max-w-2xl mx-auto px-4 md:px-0;

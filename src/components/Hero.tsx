@@ -15,7 +15,7 @@ export default function Hero() {
   const isLoaded = usePageAnimation(200);
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-24 max-w-2xl">
+    <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16  max-w-2xl">
       {/* Profile Section */}
       <div
         className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-12 ${fadeInLeft(
@@ -104,42 +104,7 @@ export default function Hero() {
           </Link>
         </div>
 
-        {/* Company Logos */}
-        <div
-          className={fadeInScale(isLoaded)}
-          style={{ transitionDelay: getStaggerDelay(4) }}
-        >
-          <p className="text-xs sm:text-sm text-gray-500 mb-4 sm:mb-6 text-center sm:text-left">
-            Trusted by founders and teams at
-          </p>
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6 lg:gap-8">
-            {[
-              { name: 'Company 1', width: 80, height: 24 },
-              { name: 'Company 2', width: 90, height: 24 },
-              { name: 'Company 3', width: 85, height: 24 },
-              { name: 'Company 4', width: 95, height: 24 },
-            ].map((company, index) => (
-              <div
-                key={company.name}
-                className={`relative opacity-60 hover:opacity-100 transition-all duration-300 transform hover:scale-110 ${fadeInUp(
-                  isLoaded
-                )}`}
-                style={{
-                  transitionDelay: getStaggerDelay(5 + index, 50),
-                  width: `${company.width}px`,
-                  height: `${company.height}px`,
-                }}
-              >
-                {/* Placeholder for company logos */}
-                <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
-                  <span className="text-xs text-gray-600 font-medium">
-                    {company.name}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        {/* Company Logos - Removed since we have ClientLogosCarousel */}
       </div>
     </section>
   );
