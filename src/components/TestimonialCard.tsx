@@ -17,7 +17,7 @@ interface TestimonialCardProps {
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
     <div className="group bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:bg-gray-100 hover:border-gray-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-      <blockquote className="text-lg text-gray-900 leading-relaxed mb-8">
+      <blockquote className="text-base md:text-lg text-gray-900 leading-relaxed mb-8">
         &quot;{testimonial.quote}&quot;
       </blockquote>
       <div className="flex items-center gap-4">

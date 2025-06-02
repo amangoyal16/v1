@@ -16,9 +16,7 @@ export default function Products() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <p className="text-base text-blue-600 mb-4 font-semibold tracking-wider uppercase">
-          MY PRODUCTS
-        </p>
+        <p className="text-base text-gray-600 mb-4">MY PRODUCTS</p>
         <h2 className="text-4xl font-bold text-gray-900 leading-tight mb-6">
           Digital products I&apos;ve built and launched
         </h2>

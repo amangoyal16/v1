@@ -15,22 +15,21 @@ export default function AboutPage() {
           className="mb-12 animate-slideUp"
           style={{ animationDelay: '0.2s' }}
         >
-          <h2 className="text-4xl font-medium   text-gray-900 leading-tight mb-8">
-            I&apos;m a senior freelance product designer crafting intuitive,
-            user-focused experiences.
+          <h2 className="text-4xl font-medium text-gray-900 leading-tight mb-8">
+            I help startups turn raw ideas into functional, user-driven
+            products.
           </h2>
-
           <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
             <p>
-              Inspired by minimalism, I focus on creating designs that simplify,
-              enrich, and add value to users&apos; lives.
+              My work sits at the intersection of product strategy, design, and
+              execution. I care about solving real user problems while keeping
+              things clean, clear, and scalable.
             </p>
-
             <p>
-              In the past, I&apos;ve worked with startups like Khatabook,
-              streamlining lending processes for MSMEs. Today, I mainly
-              collaborate with SaaS founders, indie makers, and startups to
-              bring their visions to life through user-centered design.
+              I've worked with early-stage startups and growing SaaS teams to
+              ship MVPs, improve conversion, and reduce design debt. Whether
+              it's refining a product flow or building from zero, I bring
+              clarity to complexity.
             </p>
           </div>
         </div>
@@ -40,6 +39,7 @@ export default function AboutPage() {
           className="mb-16 animate-slideUp"
           style={{ animationDelay: '0.3s' }}
         >
+          {/* PLACE IMAGE OF YOU HERE */}
           <div className="w-full aspect-square bg-gray-200 rounded-2xl overflow-hidden">
             <div className="w-full h-full flex items-center justify-center text-gray-500">
               <span className="text-6xl font-light">AG</span>
@@ -59,16 +59,15 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                My journey into design started with a fascination for how things
-                work and how they could work better. I believe that great design
-                isn&apos;t just about making things look good—it&apos;s about
-                making them work intuitively for the people who use them.
+                I started my career in engineering but quickly moved into
+                product and design when I realized I was more interested in "why
+                we're building" than just "what we're building."
               </p>
               <p>
-                Over the years, I&apos;ve had the privilege of working with
-                companies at different stages, from early-stage startups
-                figuring out their product-market fit to established companies
-                looking to reimagine their user experience.
+                Since then, I've led cross-functional teams, redesigned SaaS
+                dashboards, shipped AI tools, and helped founders find
+                product-market fit. I'm not just here to make things look good —
+                I'm here to make them work better.
               </p>
             </div>
           </section>
@@ -76,21 +75,18 @@ export default function AboutPage() {
           {/* Approach */}
           <section>
             <h3 className="text-2xl font-medium text-gray-900 mb-6">
-              My Approach
+              Approach
             </h3>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                I approach every project with curiosity and empathy. Before
-                diving into pixels and prototypes, I spend time understanding
-                the business goals, user needs, and technical constraints. This
-                foundation helps me create designs that aren&apos;t just
-                beautiful, but also practical and effective.
+                Every product starts with a problem. I begin by understanding
+                the business case, the user context, and any technical
+                constraints. That sets the foundation for fast, focused design.
               </p>
               <p>
-                My design philosophy is rooted in minimalism—not the stark, cold
-                kind, but the thoughtful elimination of everything that
-                doesn&apos;t serve the user&apos;s goals. Every element should
-                have a purpose, every interaction should feel natural.
+                I work lean — designing just enough to test assumptions,
+                validate early, and keep momentum. And I always keep dev handoff
+                in mind, because good design is only useful when it ships.
               </p>
             </div>
           </section>
@@ -102,38 +98,39 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                I specialize in product design for SaaS companies and startups.
-                Whether you&apos;re building an MVP, redesigning an existing
-                product, or scaling your design system, I can help you create
-                experiences that users love and businesses thrive on.
+                I partner with SaaS founders and product teams to launch and
+                scale digital products. This includes MVP design, UX audits,
+                feature design, and design systems.
               </p>
               <p>
-                My work spans the entire design process—from initial research
-                and strategy to final implementation. I believe in close
-                collaboration with development teams to ensure that the final
-                product matches the design vision.
+                I can work solo or embedded with your team — async-first, always
+                aligned with your roadmap. Most of my clients come back for
+                multiple projects because I deliver clean, effective outcomes
+                without overthinking.
               </p>
             </div>
+          </section>
+
+          {/* Optional Image: Screenshots of Projects */}
+          <section>
+            {/* PLACE PROJECT SCREENSHOTS OR DESIGN PROCESS IMAGE HERE */}
           </section>
 
           {/* Personal */}
           <section>
             <h3 className="text-2xl font-medium text-gray-900 mb-6">
-              Beyond Design
+              Outside Work
             </h3>
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
-                When I&apos;m not designing, you&apos;ll find me exploring new
-                technologies, reading about psychology and human behavior, or
-                experimenting with new design tools and techniques. I&apos;m
-                always looking for ways to improve my craft and stay current
-                with industry trends.
+                I’m currently based in India but work with clients globally.
+                Outside of work, I’m learning piano, experimenting with new
+                tools, and trying to build healthier habits — slowly but surely.
               </p>
               <p>
-                I also enjoy sharing what I&apos;ve learned through writing and
-                speaking. Teaching others helps me solidify my own understanding
-                and gives back to the design community that has taught me so
-                much.
+                I occasionally write about design, product thinking, and remote
+                work. I believe sharing what I learn is the best way to stay
+                sharp and give back.
               </p>
             </div>
           </section>
@@ -145,11 +142,11 @@ export default function AboutPage() {
           style={{ animationDelay: '0.5s' }}
         >
           <h3 className="text-2xl font-medium text-gray-900 mb-6">
-            Let&apos;s work together
+            Let’s work together
           </h3>
           <p className="text-lg text-gray-600 mb-8">
-            I&apos;m always interested in hearing about new projects and
-            opportunities to create meaningful experiences.
+            If you're building something and want design that’s clear, fast, and
+            product-driven — I’m in.
           </p>
           <div className="flex gap-4 justify-center">
             <Link
@@ -172,6 +169,7 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
+
       <Footer />
       <style jsx>{`
         @keyframes slideUp {

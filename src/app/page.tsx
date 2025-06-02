@@ -38,7 +38,10 @@ export default function Home() {
       </section>
 
       {/* Client Testimonials Section */}
-      <section id="testimonials" className="mx-auto px-6 py-24 container mt-20">
+      <section
+        id="testimonials"
+        className="mx-auto px-6 py-12 md:py-24 container"
+      >
         {/* Section Header */}
         <div className="mb-16">
           <FoundersImages />
@@ -68,7 +71,7 @@ export default function Home() {
         <div className="mt-12 flex justify-center">
           <a
             href="/testimonials"
-            className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-8 py-4 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 "
+            className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-sm"
           >
             Read More Testimonials
             <ArrowUpRightIcon width="20" height="20" />

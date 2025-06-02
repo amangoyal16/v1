@@ -8,6 +8,7 @@ import {
   fadeInUp,
   getStaggerDelay,
 } from '@/hooks/usePageAnimation';
+import { ArrowUpRightIcon } from './Icons';
 
 interface ProjectsGridProps {
   maxProjects?: number;
@@ -108,9 +109,7 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
           className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-sm"
         >
           View All Projects
-          <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
+          <ArrowUpRightIcon width="20" height="20" />
         </Link>
       </div>
     </section>
