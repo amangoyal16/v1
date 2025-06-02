@@ -1,0 +1,38 @@
+export const productsData = [
+  {
+    id: 1,
+    name: 'Invoice Generation',
+    description: 'Automated invoice creation and management system',
+    icon: '📄',
+    slug: 'invoice-generation',
+    status: 'Live',
+    color: 'bg-blue-50 border-blue-100 text-blue-600',
+  },
+  {
+    id: 2,
+    name: 'Prompt Generator',
+    description: 'AI prompt creation tool for better outputs',
+    icon: '🤖',
+    slug: 'prompt-generator',
+    status: 'Live',
+    color: 'bg-purple-50 border-purple-100 text-purple-600',
+  },
+  {
+    id: 3,
+    name: 'Instagram Pipeline',
+    description: 'Content generation and scheduling automation',
+    icon: '📸',
+    slug: 'instagram-pipeline',
+    status: 'Beta',
+    color: 'bg-pink-50 border-pink-100 text-pink-600',
+  },
+  {
+    id: 4,
+    name: 'Fitness Tracker',
+    description: 'Meals and exercise tracking application',
+    icon: '💪',
+    slug: 'fitness-tracker',
+    status: 'Development',
+    color: 'bg-green-50 border-green-100 text-green-600',
+  },
+];

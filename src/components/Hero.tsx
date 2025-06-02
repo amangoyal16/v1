@@ -1,116 +1,111 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 
-const projectScreens = [
-  '/clients/ARKivist-desktop.png',
-  '/clients/Jeeves.png',
-  '/clients/MUV-desktop.png',
-  '/clients/Myosin-Website.png',
-];
+import Image from 'next/image';
+import Link from 'next/link';
+import { ArrowUpRightIcon } from '@/components/Icons';
+import {
+  usePageAnimation,
+  fadeInUp,
+  fadeInLeft,
+  fadeInScale,
+  getStaggerDelay,
+} from '@/hooks/usePageAnimation';
 
 export default function Hero() {
+  const isLoaded = usePageAnimation(200);
+
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-b from-white to-gray-50">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-transparent"></div>
-      </div>
-
-      {/* Main Content */}
-      <div className=" mx-auto px-4 min-h-[80vh] text-center flex flex-col justify-center relative z-10">
-        <div className="max-w-5xl mx-auto">
-          {/* Greeting */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <p className="text-xl font-medium text-gray-600">
-              👋 Let&apos;s create something amazing together!
-            </p>
-          </motion.div>
-
-          {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold mb-8 tracking-tight leading-[1.1] text-gray-900"
-          >
-            I help founders and teams turn ideas into{' '}
-            <span className="text-[#111827]">products that grow.</span>
-          </motion.h1>
-
-          {/* Supporting Text */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl text-gray-600 mb-12 max-w-3xl leading-relaxed mx-auto"
-          >
-            Since 2020, I&apos;ve helped 20+ founders transform their brands
-            across AI, dating, healthcare, e-commerce, fashion and more through
-            designs that create meaningful connections.
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="flex flex-wrap gap-6 justify-center"
-          >
-            <Button className="rounded-full  px-10 py-6 bg-[#111827] hover:bg-[#1F2937] text-white font-medium text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              Explore Work
-            </Button>
-            <Button
-              variant="outline"
-              className="rounded-full px-10 py-6 border-2 text-lg font-medium hover:bg-gray-50 transition-all duration-300 transform hover:-translate-y-1"
-            >
-              Book a Call
-            </Button>
-          </motion.div>
+    <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16  max-w-2xl">
+      {/* Profile Section */}
+      <div
+        className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-12 ${fadeInLeft(
+          isLoaded
+        )}`}
+      >
+        <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden flex-shrink-0">
+          <Image
+            src="/me.png"
+            alt="Profile"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+        <div className="flex-1">
+          <h1 className="text-lg sm:text-xl font-medium text-gray-900 mb-1 sm:mb-2">
+            Aman Goyal
+          </h1>
+          <p className="text-sm sm:text-base text-gray-600">
+            Product & Design Strategist
+          </p>
         </div>
       </div>
 
-      {/* Project Screens Carousel */}
-      <div className="h-[400px] w-full overflow-hidden hidden">
-        <motion.div
-          className="flex space-x-8"
-          animate={{
-            x: [0, -1000],
-          }}
-          transition={{
-            x: {
-              repeat: Infinity,
-              repeatType: 'loop',
-              duration: 20,
-              ease: 'linear',
-            },
-          }}
+      {/* Main Content */}
+      <div className="space-y-6 sm:space-y-8">
+        {/* Headline */}
+        <div
+          className={fadeInUp(isLoaded)}
+          style={{ transitionDelay: getStaggerDelay(1) }}
         >
-          {projectScreens.map((screen, index) => (
-            <div
-              key={index}
-              className="relative w-[800px] h-[400px] rounded-xl overflow-hidden shadow-2xl"
-            >
-              <Image
-                src={screen}
-                alt={`Project Screen ${index + 1}`}
-                fill
-                className="object-cover"
-              />
-            </div>
-          ))}
-        </motion.div>
-      </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight tracking-tight mb-4 sm:mb-6">
+            I help{' '}
+            <span className="relative">
+              <span className="bg-yellow-200 px-1 sm:px-2 py-1 rounded-md">
+                founders
+              </span>
+            </span>{' '}
+            and{' '}
+            <span className="relative">
+              <span className="bg-blue-200 px-1 sm:px-2 py-1 rounded-md">
+                product teams
+              </span>
+            </span>{' '}
+            design and build products that{' '}
+            <span className="relative">
+              <span className="bg-green-200 px-1 sm:px-2 py-1 rounded-md">
+                users love
+              </span>
+            </span>
+          </h2>
+        </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-30"></div>
-      <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-purple-100 rounded-full blur-3xl opacity-30"></div>
+        {/* Description */}
+        <div
+          className={fadeInUp(isLoaded)}
+          style={{ transitionDelay: getStaggerDelay(2) }}
+        >
+          <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
+            I&apos;m a product designer with a passion for creating meaningful
+            digital experiences. I work with startups and established companies
+            to design products that solve real problems and delight users.
+          </p>
+        </div>
+
+        {/* Action Buttons */}
+        <div
+          className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 ${fadeInUp(
+            isLoaded
+          )}`}
+          style={{ transitionDelay: getStaggerDelay(3) }}
+        >
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+          >
+            Let&apos;s work together
+            <ArrowUpRightIcon width="18" height="18" />
+          </Link>
+          <Link
+            href="/about"
+            className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95"
+          >
+            More about me
+          </Link>
+        </div>
+
+        {/* Company Logos - Removed since we have ClientLogosCarousel */}
+      </div>
     </section>
   );
 }
