@@ -15,9 +15,12 @@ export default function Hero() {
   const isLoaded = usePageAnimation(200);
 
   return (
-    <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-16  max-w-2xl">
+    <section
+      className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 max-w-2xl"
+      role="banner"
+    >
       {/* Profile Section */}
-      <div
+      <header
         className={`flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 mb-8 sm:mb-12 ${fadeInLeft(
           isLoaded
         )}`}
@@ -25,30 +28,30 @@ export default function Hero() {
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden flex-shrink-0">
           <Image
             src="/me.png"
-            alt="Profile"
+            alt="Aman Goyal - Product & Design Strategist"
             fill
             className="object-cover"
             priority
           />
         </div>
         <div className="flex-1">
-          <h1 className="text-lg sm:text-xl font-medium text-gray-900 mb-1 sm:mb-2">
+          <div className="text-lg sm:text-xl font-medium text-gray-900 mb-1 sm:mb-2">
             Aman Goyal
-          </h1>
+          </div>
           <p className="text-sm sm:text-base text-gray-600">
             Product & Design Strategist
           </p>
         </div>
-      </div>
+      </header>
 
       {/* Main Content */}
       <div className="space-y-6 sm:space-y-8">
-        {/* Headline */}
+        {/* Main Headline - Primary H1 for SEO */}
         <div
           className={fadeInUp(isLoaded)}
           style={{ transitionDelay: getStaggerDelay(1) }}
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight tracking-tight mb-4 sm:mb-6">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900 leading-tight tracking-tight mb-4 sm:mb-6">
             I help{' '}
             <span className="relative">
               <span className="bg-yellow-200 px-1 sm:px-2 py-1 rounded-md">
@@ -67,44 +70,60 @@ export default function Hero() {
                 users love
               </span>
             </span>
-          </h2>
+          </h1>
         </div>
 
-        {/* Description */}
+        {/* Description with schema markup */}
         <div
           className={fadeInUp(isLoaded)}
           style={{ transitionDelay: getStaggerDelay(2) }}
         >
-          <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8">
-            I&apos;m a product designer with a passion for creating meaningful
-            digital experiences. I work with startups and established companies
-            to design products that solve real problems and delight users.
+          <p
+            className="text-base sm:text-lg text-gray-600 leading-relaxed mb-6 sm:mb-8"
+            itemScope
+            itemType="https://schema.org/description"
+          >
+            I&apos;m a{' '}
+            <span itemProp="jobTitle">senior freelance product designer</span>{' '}
+            with a passion for creating meaningful digital experiences. I work
+            with{' '}
+            <span itemProp="serviceType">
+              startups and established companies
+            </span>
+            to design products that solve real problems and delight users
+            through{' '}
+            <span itemProp="expertise">
+              user-centered design, MVP development, and product strategy
+            </span>
+            .
           </p>
         </div>
 
-        {/* Action Buttons */}
-        <div
+        {/* Call-to-Action Buttons */}
+        <nav
           className={`flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 ${fadeInUp(
             isLoaded
           )}`}
           style={{ transitionDelay: getStaggerDelay(3) }}
+          role="navigation"
+          aria-label="Primary actions"
         >
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+            title="Contact Aman Goyal for product design services"
           >
             Let&apos;s work together
-            <ArrowUpRightIcon width="18" height="18" />
+            <ArrowUpRightIcon width="18" height="18" aria-hidden="true" />
           </Link>
           <Link
             href="/about"
             className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95"
+            title="Learn more about Aman Goyal's background and experience"
           >
             More about me
           </Link>
-        </div>
-
-        {/* Company Logos - Removed since we have ClientLogosCarousel */}
+        </nav>
       </div>
     </section>
   );

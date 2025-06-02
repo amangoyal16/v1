@@ -1,20 +1,14 @@
 'use client';
 
-import Image from 'next/image';
 import {
   ArrowUpRightIcon,
-  EmailIcon,
-  TwitterIcon,
-  DribbbleIcon,
-  LinkedInIcon,
-  PeerlistIcon,
   DocumentIcon,
   RefreshIcon,
   FileDocumentIcon,
   LayersIcon,
   PaletteIcon,
 } from '@/components/Icons';
-import { foundersImageArray, testimonials } from '@/constants/testimonials';
+import { testimonials } from '@/constants/testimonials';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
@@ -24,21 +18,27 @@ import Products from '@/components/Products';
 import Blog from '@/components/Blog';
 import ProjectsGrid from '@/components/ProjectsGrid';
 import ClientLogosCarousel from '@/components/ClientLogosCarousel';
+import Pricing from '@/components/Pricing';
+import FloatingBottomNav from '@/components/FloatingBottomNav';
 
 export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Hero />
+      <section id="hero">
+        <Hero />
+      </section>
 
       {/* Client Logos Carousel */}
       <ClientLogosCarousel />
 
       {/* Projects Section */}
-      <ProjectsGrid maxProjects={4} />
+      <section id="projects">
+        <ProjectsGrid maxProjects={4} />
+      </section>
 
       {/* Client Testimonials Section */}
-      <section className="mx-auto px-6 py-24 container mt-20">
+      <section id="testimonials" className="mx-auto px-6 py-24 container mt-20">
         {/* Section Header */}
         <div className="mb-16">
           <FoundersImages />
@@ -76,8 +76,13 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing">
+        <Pricing />
+      </section>
+
       {/* How Can I Help You Section */}
-      <section className="container mx-auto px-6 py-16 max-w-2xl">
+      <section id="services" className="container mx-auto px-6 py-16 max-w-2xl">
         {/* Section Header */}
         <div className="mb-12">
           <p className="text-base text-gray-600 mb-4">HOW CAN I HELP YOU</p>
@@ -200,16 +205,25 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <Products />
+      <section id="products">
+        <Products />
+      </section>
 
       {/* Blog Section */}
-      <Blog />
+      <section id="blog">
+        <Blog />
+      </section>
 
       {/* FAQ Section */}
-      <FAQ />
+      <section id="faq">
+        <FAQ />
+      </section>
 
       {/* Footer Section */}
       <Footer />
+
+      {/* Floating Bottom Navigation */}
+      {/* <FloatingBottomNav /> */}
     </>
   );
 }

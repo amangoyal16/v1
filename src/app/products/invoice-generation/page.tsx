@@ -10,12 +10,13 @@ import {
   fadeInScale,
   fadeIn,
 } from '@/hooks/usePageAnimation';
+import { ArrowLeftIcon } from 'lucide-react';
 
 export default function InvoiceGenerationPage() {
   const isLoaded = usePageAnimation();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white max-w-3xl mx-auto">
       <main
         className={`container mx-auto px-6 py-16 max-w-4xl ${fadeInUp(
           isLoaded
@@ -27,7 +28,7 @@ export default function InvoiceGenerationPage() {
             href="/"
             className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors mb-8"
           >
-            <span>←</span>
+            <ArrowLeftIcon width="20" height="20" />
             Back to Home
           </Link>
         </div>
