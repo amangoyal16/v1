@@ -1,6 +1,4 @@
 'use client';
-
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRightIcon } from '@/components/Icons';
 import Footer from '@/components/Footer';
@@ -26,9 +24,9 @@ export default function AboutPage() {
               things clean, clear, and scalable.
             </p>
             <p>
-              I've worked with early-stage startups and growing SaaS teams to
-              ship MVPs, improve conversion, and reduce design debt. Whether
-              it's refining a product flow or building from zero, I bring
+              I&apos;ve worked with early-stage startups and growing SaaS teams
+              to ship MVPs, improve conversion, and reduce design debt. Whether
+              it&apos;s refining a product flow or building from zero, I bring
               clarity to complexity.
             </p>
           </div>
@@ -60,14 +58,15 @@ export default function AboutPage() {
             <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
               <p>
                 I started my career in engineering but quickly moved into
-                product and design when I realized I was more interested in "why
-                we're building" than just "what we're building."
+                product and design when I realized I was more interested in
+                &quot;why we&apos;re building&quot; than just &quot;what
+                we&apos;re building.&quot;
               </p>
               <p>
-                Since then, I've led cross-functional teams, redesigned SaaS
-                dashboards, shipped AI tools, and helped founders find
-                product-market fit. I'm not just here to make things look good —
-                I'm here to make them work better.
+                Since then, I&apos;ve led cross-functional teams, redesigned
+                SaaS dashboards, shipped AI tools, and helped founders find
+                product-market fit. I&apos;m not just here to make things look
+                good — I&apos;m here to make them work better.
               </p>
             </div>
           </section>
@@ -145,8 +144,8 @@ export default function AboutPage() {
             Let’s work together
           </h3>
           <p className="text-lg text-gray-600 mb-8">
-            If you're building something and want design that’s clear, fast, and
-            product-driven — I’m in.
+            If you&apos;re building something and want design that&apos;s clear,
+            fast, and product-driven — I&apos;m in.
           </p>
           <div className="flex gap-4 justify-center">
             <Link
