@@ -10,6 +10,7 @@ import {
   fadeInScale,
   getStaggerDelay,
 } from '@/hooks/usePageAnimation';
+import { calLink } from '@/constants/info';
 
 export default function Hero() {
   const isLoaded = usePageAnimation(200);
@@ -109,11 +110,11 @@ export default function Hero() {
           aria-label="Primary actions"
         >
           <Link
-            href="/contact"
+            href={calLink}
             className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
             title="Contact Aman Goyal for product design services"
           >
-            Let&apos;s work together
+            Book a Free Discovery Call
             <ArrowUpRightIcon width="18" height="18" aria-hidden="true" />
           </Link>
           <Link

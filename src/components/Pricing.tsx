@@ -1,7 +1,9 @@
 'use client';
 
 import { CheckmarkIcon } from '@/components/Icons';
+import { calLink } from '@/constants/info';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const Pricing = () => {
   return (
@@ -91,9 +93,12 @@ const Pricing = () => {
 
               {/* Button */}
               <div className="flex gap-4">
-                <button className="flex-1 bg-gradient-to-r from-white to-blue-50 text-gray-900 font-bold py-4 px-6 rounded-full hover:shadow-2xl transition-all duration-300 border border-blue-100">
+                <Link
+                  href={calLink}
+                  className="flex-1 bg-gradient-to-r from-white to-blue-50 text-gray-900 font-bold py-4 px-6 rounded-full hover:shadow-2xl transition-all duration-300 border border-blue-100"
+                >
                   Book a Free Discovery Call
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -163,16 +168,12 @@ const Pricing = () => {
 
               {/* Button */}
               <div className="flex gap-4">
-                <motion.button
+                <Link
+                  href={calLink}
                   className="flex-1 bg-gradient-to-r from-gray-900 to-blue-900 text-white font-bold py-4 px-6 rounded-full hover:shadow-2xl transition-all duration-300"
-                  whileHover={{
-                    scale: 1.02,
-                    boxShadow: '0 20px 40px rgba(17, 24, 39, 0.3)',
-                  }}
-                  whileTap={{ scale: 0.98 }}
                 >
                   Book a Free Discovery Call
-                </motion.button>
+                </Link>
               </div>
             </div>
           </div>

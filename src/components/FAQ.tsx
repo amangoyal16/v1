@@ -97,31 +97,6 @@ export default function FAQ() {
           );
         })}
       </div>
-
-      {/* Contact CTA */}
-      <div
-        className={`mt-12 sm:mt-16 text-center ${fadeInUp(isLoaded)}`}
-        style={{ transitionDelay: getStaggerDelay(faqData.length + 1) }}
-      >
-        <div className="bg-gray-50 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-gray-200">
-          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3">
-            Still have questions?
-          </h3>
-          <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">
-            I&apos;d love to hear about your project and discuss how we can work
-            together.
-          </p>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
-          >
-            Get in Touch
-            <span className="transform transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </a>
-        </div>
-      </div>
     </section>
   );
 }

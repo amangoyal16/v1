@@ -8,6 +8,8 @@ import {
   LinkedInIcon,
   PeerlistIcon,
 } from '@/components/Icons';
+import { calLink } from '@/constants/info';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -25,13 +27,14 @@ export default function Footer() {
 
           {/* Action Buttons */}
           <div className="flex gap-4 mb-16">
-            <a
-              href="/contact"
-              className="bg-black text-white px-8 py-4 rounded-full text-base font-medium hover:bg-gray-800 transition-colors flex items-center gap-2"
+            <Link
+              href={calLink}
+              className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+              title="Contact Aman Goyal for product design services"
             >
-              Let&apos;s Work Together
-              <ArrowUpRightIcon width="20" height="20" />
-            </a>
+              Book a Free Discovery Call
+              <ArrowUpRightIcon width="18" height="18" aria-hidden="true" />
+            </Link>
 
             <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105">
               Copy Email
