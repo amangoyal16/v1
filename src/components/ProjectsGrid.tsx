@@ -30,8 +30,8 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
             className={fadeInUp(isLoaded)}
             style={{ transitionDelay: getStaggerDelay(index) }}
           >
-            <Link
-              href={`/projects/${project.slug}`}
+            <div
+              // href={`/projects/${project.slug}`}
               className="group cursor-pointer block"
             >
               <div className="space-y-3 sm:space-y-4">
@@ -86,15 +86,15 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
                   </div>
 
                   {/* Hover indicator */}
-                  <div className="flex items-center text-xs sm:text-sm text-gray-400 group-hover:text-gray-600 transition-colors duration-300 pt-1">
+                  {/* <div className="flex items-center text-xs sm:text-sm text-gray-400 group-hover:text-gray-600 transition-colors duration-300 pt-1">
                     <span>View project</span>
                     <span className="ml-1 transform group-hover:translate-x-1 transition-transform duration-300">
                       →
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
-            </Link>
+            </div>
           </div>
         ))}
       </div>
@@ -105,7 +105,8 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
         style={{ transitionDelay: getStaggerDelay(projectsToShow.length) }}
       >
         <Link
-          href="/projects"
+          href="https://www.figma.com/proto/lMSXkYbsM55Ro91SjkHlNe/Aman---Work?node-id=5-2163&t=7P4lWzC15Jk3Xx2G-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2163"
+          target="_blank"
           className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-sm"
         >
           View All Projects
