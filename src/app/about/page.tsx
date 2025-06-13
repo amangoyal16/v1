@@ -41,7 +41,7 @@ export default function AboutPage() {
         <div className="flex flex-row gap-6 justify-center">
           <div className="bg-white p-4 shadow-lg transform rotate-[-2deg] hover:rotate-0 transition-transform duration-300">
             <Image
-              src="/travel.jpg"
+              src="/amantravel.jpg"
               alt="Aman Goyal"
               width={300}
               height={200}
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </div>
           <div className="bg-white p-4 shadow-lg transform rotate-[2deg] hover:rotate-0 transition-transform duration-300">
             <Image
-              src="/aman-bawa.jpg"
+              src="/amanbawa.jpg"
               alt="Aman Goyal"
               width={300}
               height={200}

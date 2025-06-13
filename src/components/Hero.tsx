@@ -28,7 +28,7 @@ export default function Hero() {
       >
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden flex-shrink-0">
           <Image
-            src="/aman.jpg"
+            src="/amaninfo.jpg"
             alt="Aman Goyal - Product & Design Strategist"
             fill
             className="object-cover"
