@@ -213,9 +213,9 @@ export default function Home() {
       </section> */}
 
       {/* Blog Section */}
-      <section id="blog">
+      {/* <section id="blog">
         <Blog />
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section id="faq">

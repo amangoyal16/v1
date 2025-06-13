@@ -9,6 +9,7 @@ import {
   getStaggerDelay,
 } from '@/hooks/usePageAnimation';
 import { ArrowUpRightIcon } from './Icons';
+import { projectsLink } from '@/constants/info';
 
 interface ProjectsGridProps {
   maxProjects?: number;
@@ -105,7 +106,7 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
         style={{ transitionDelay: getStaggerDelay(projectsToShow.length) }}
       >
         <Link
-          href="https://www.figma.com/proto/lMSXkYbsM55Ro91SjkHlNe/Aman---Work?node-id=5-2163&t=7P4lWzC15Jk3Xx2G-1&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=5%3A2163"
+          href={projectsLink}
           target="_blank"
           className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-sm"
         >

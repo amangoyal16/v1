@@ -49,7 +49,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => toggleItem(item.id)}
-                className="w-full text-left p-4 sm:p-6 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 rounded-xl sm:rounded-2xl transition-all duration-200 active:scale-[0.98]"
+                className="w-full text-left p-4 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-200 active:scale-[0.98]"
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${item.id}`}
               >
