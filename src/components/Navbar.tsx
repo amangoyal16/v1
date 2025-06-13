@@ -14,29 +14,27 @@ export default function Navbar() {
               href="/"
               className="flex items-center space-x-2 sm:space-x-3 group"
             >
-              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-black rounded-md flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-200">
-                <span className="text-white font-bold text-xs sm:text-sm">
-                  AG
-                </span>
+              <div className="w-7 h-7 sm:w-8 sm:h-8 bg-black  rounded-md flex items-center justify-center group-hover:bg-gray-800 transition-colors duration-200">
+                <span className="text-white font-bold text-sm">AG</span>
               </div>
-              <span className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-black transition-colors duration-200">
+              <span className="text-lg sm:text-xl font-semibold text-gray-900 group-hover:text-black transition-colors duration-200 hidden md:block">
                 Aman Goyal
               </span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className=" md:flex items-center space-x-6">
+          <div className=" md:flex items-center space-x-2 md:space-x-6">
             <Link
               href={projectsLink}
               target="_blank"
-              className="bg-white border border-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-all duration-200 hover:scale-105 active:scale-95"
+              className="bg-white border whitespace-nowrap border-gray-200 text-gray-900 px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-50 transition-all duration-200 hover:scale-105 active:scale-95"
             >
               View Work
             </Link>
             <Link
               href={calLink}
-              className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 active:scale-95"
+              className="bg-black whitespace-nowrap text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 active:scale-95"
             >
               Book an Intro Call
             </Link>

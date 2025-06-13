@@ -8,8 +8,14 @@ import {
   LinkedInIcon,
   PeerlistIcon,
 } from '@/components/Icons';
-import { calLink } from '@/constants/info';
+import { calLink, emailLink } from '@/constants/info';
 import Link from 'next/link';
+import { toast } from 'sonner';
+
+const copyEmail = () => {
+  navigator.clipboard.writeText(emailLink);
+  toast.success('Email copied to clipboard!');
+};
 
 export default function Footer() {
   return (
@@ -26,17 +32,20 @@ export default function Footer() {
           </h2>
 
           {/* Action Buttons */}
-          <div className="flex gap-4 mb-16">
+          <div className="md:flex gap-4 mb-16 space-y-4 md:space-y-0">
             <Link
               href={calLink}
-              className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-4 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95 w-full md:w-auto"
               title="Contact Aman Goyal for product design services"
             >
               Book a Free Discovery Call
               <ArrowUpRightIcon width="18" height="18" aria-hidden="true" />
             </Link>
 
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105">
+            <button
+              onClick={copyEmail}
+              className="border w-full md:w-auto border-gray-300 text-gray-700 px-8 py-4 rounded-full text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105"
+            >
               Copy Email
             </button>
           </div>

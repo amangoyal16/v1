@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import PageTransition from '@/components/PageTransition';
 import { SEOStructuredData } from '@/components/SEOStructuredData';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -127,6 +128,7 @@ export default function RootLayout({
           <main className="min-h-screen" role="main">
             {children}
           </main>
+          <Toaster position="bottom-right" />
         </PageTransition>
         <SEOStructuredData />
       </body>
