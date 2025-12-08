@@ -1,21 +1,20 @@
 'use client';
 
 // TODO: REVIEW AND UPDATE CASE STUDY CONTENT
-// 1. Replace placeholder images with actual project artifacts (wireframes, user research, final UI)
+// 1. Replace placeholder images with actual project artifacts (Dashboard, Token-gated Commerce, Engagement Graphs)
 // 2. Verify specific metrics in 'Results & Impact' section
-// 3. Update 'My Role' and 'Team' sections with actual contributors
-// 4. Validate technical details in 'Engineering Challenges'
+// 3. Confirm technical stack details
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePageAnimation, fadeInUp, fadeIn } from '@/hooks/usePageAnimation';
 import { ArrowUpRightIcon, BackArrowIcon } from '@/components/Icons';
 
-export default function ARKivistProjectPage() {
+export default function MagnetiqProjectPage() {
   const isLoaded = usePageAnimation();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-green-100 selection:text-green-900">
+    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-purple-100 selection:text-purple-900">
       <main className="container mx-auto px-6 py-16 max-w-5xl">
         {/* Navigation */}
         <div
@@ -41,21 +40,22 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '200ms' }}
         >
           <div className="flex flex-wrap gap-3 text-sm font-medium tracking-wide uppercase text-gray-500 mb-6">
-            <span className="text-green-600">Product Design</span>
+            <span className="text-purple-600">Web3 Product Design</span>
             <span>•</span>
-            <span>WebAR Strategy</span>
+            <span>Creator Economy</span>
             <span>•</span>
-            <span>2024</span>
+            <span>2021 - Present</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-gray-900 leading-[1.1]">
-            ARKivist: Democratizing <br className="hidden md:block" /> Immersive
-            Commerce
+            MAGNETIQ: <br className="hidden md:block" /> Building Cult Brands{' '}
+            <br className="hidden md:block" /> on the Blockchain
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-            A plug-and-play WebAR platform empowering brands to deploy immersive
-            product experiences instantly—no app download required.
+            A Web3-powered consumer platform that bridges the gap between
+            creator influence and community ownership—delivering the power of
+            blockchain with the simplicity of Web2.
           </p>
         </header>
 
@@ -65,13 +65,21 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '300ms' }}
         >
           <div className="relative overflow-hidden rounded-3xl bg-gray-50 aspect-[16/9] shadow-sm border border-gray-100">
+            {/* TODO: Add actual project screenshot */}
+            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-slate-50">
+              <span className="text-lg">
+                [Hero Image: MAGNETIQ Dashboard & Community Hub]
+              </span>
+            </div>
+            {/* 
             <Image
-              src="/projects/ARKivist-desktop.png"
-              alt="ARKivist Platform Interface"
+              src="/projects/magnetiq-hero.png" 
+              alt="MAGNETIQ Platform Interface"
               fill
               className="object-cover"
               priority
-            />
+            /> 
+            */}
           </div>
         </div>
 
@@ -86,33 +94,33 @@ export default function ARKivistProjectPage() {
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               My Role
             </h3>
-            <p className="text-base font-medium">Lead Product Designer</p>
+            <p className="text-base font-medium">Product Designer</p>
             <p className="text-sm text-gray-500 mt-1">
-              UX Research, UI Design, Prototyping
+              UX/UI, Design Strategy, Web3 Onboarding
             </p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Timeline
             </h3>
-            <p className="text-base font-medium">4 Months</p>
-            <p className="text-sm text-gray-500 mt-1">Jan 2024 - April 2024</p>
+            <p className="text-base font-medium">Ongoing</p>
+            <p className="text-sm text-gray-500 mt-1">Started Early 2021</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Team
             </h3>
-            <p className="text-base font-medium">1 PM, 2 Engineers</p>
-            <p className="text-sm text-gray-500 mt-1">
-              Cross-functional collaboration
-            </p>
+            <p className="text-base font-medium">Founding Team</p>
+            <p className="text-sm text-gray-500 mt-1">Design + Engineering</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
-              Platform
+              Stack
             </h3>
-            <p className="text-base font-medium">Web (Mobile & Desktop)</p>
-            <p className="text-sm text-gray-500 mt-1">React, WebXR, Three.js</p>
+            <p className="text-base font-medium">Web3 / Blockchain</p>
+            <p className="text-sm text-gray-500 mt-1">
+              React, Solidity, Shopify API
+            </p>
           </div>
         </section>
 
@@ -125,15 +133,15 @@ export default function ARKivistProjectPage() {
           >
             <h2 className="text-3xl font-bold mb-6">The Problem</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Augmented Reality (AR) in e-commerce has historically suffered
-              from high friction. Users were forced to download heavy native
-              apps just to view a single product in their space, leading to
-              massive drop-off rates.
+              Web3 technologies offer incredible opportunities for verification,
+              ownership, and community governance. However, the user experience
+              is notoriously hostile. Wallets, gas fees, and seed phrases create
+              a massive barrier to entry for the average consumer.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed bg-gray-50 p-6 rounded-xl border-l-4 border-green-500 italic">
-              &quot;60% of users abandon an AR experience if it requires an app
-              download. Brands wanted the engagement of AR without the friction
-              of the App Store.&quot;
+            <p className="text-lg text-gray-700 leading-relaxed bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500 italic">
+              &quot;Creators wanted to build &apos;cult-like&apos; loyalty using
+              blockchain tech, but their fans didn&apos;t want to learn how to
+              be crypto-traders just to buy a t-shirt.&quot;
             </p>
           </section>
 
@@ -143,20 +151,20 @@ export default function ARKivistProjectPage() {
             <ul className="space-y-6">
               {[
                 {
-                  title: 'Eliminate Friction',
-                  desc: 'Enable instant AR experiences directly in the mobile browser using WebXR.',
+                  title: 'Invisible Web3',
+                  desc: 'Design an interface that feels like a standard Web2 app (Instagram/Shopify) while executing blockchain transactions in the background.',
                 },
                 {
-                  title: 'Simplify Integration',
-                  desc: 'Create a "low-code" dashboard for brands to upload 3D assets and generate embeddable snippets.',
+                  title: 'Commerce-Based Community',
+                  desc: 'Enable creators to sell customized items that double as digital access passes (utility NFTs) without using jargon.',
                 },
                 {
-                  title: 'Drive Conversion',
-                  desc: 'Design clear calls-to-action within the AR view to bridge the gap between visualization and purchase.',
+                  title: 'Verifiable Engagement',
+                  desc: 'Create an "Engagement Engine" that tracks and rewards user interactions on-chain.',
                 },
               ].map((goal, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center font-bold text-sm">
                     {i + 1}
                   </div>
                   <div>
@@ -172,28 +180,44 @@ export default function ARKivistProjectPage() {
 
           {/* Research & Discovery */}
           <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">Discovery & Insights</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              The &quot;Mullet&quot; Strategy
+            </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We conducted interviews with 15 e-commerce managers and analyzed 5
-              competitor platforms. The discovery phase revealed that while the
-              technology was the main barrier, the *workflow* for content
-              management was equally broken.
+              We adopted a philosophy I call the &quot;Mullet Strategy&quot;:{' '}
+              <strong>Web2 in the front, Web3 in the back.</strong>
+              Our research showed that users cared about the <em>
+                benefits
+              </em>{' '}
+              of Web3 (reselling items, proving fandom) but hated the{' '}
+              <em>process</em>.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 1: Asset Pipeline</h4>
+                <h4 className="font-bold mb-2">Friction Point: Wallets</h4>
                 <p className="text-sm text-gray-600">
-                  Brands struggle to optimize 3D models for the web. They need
-                  automated compression tools built-in.
+                  <span className="text-red-500 font-medium">Problem:</span>{' '}
+                  &quot;Connect Wallet&quot; buttons cause 90% drop-off for
+                  non-crypto natives.
+                  <br />
+                  <span className="text-green-600 font-medium">
+                    Solution:
+                  </span>{' '}
+                  Custodial wallets created via email login (Magic Link).
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 2: Contextual UI</h4>
+                <h4 className="font-bold mb-2">Friction Point: Gas Fees</h4>
                 <p className="text-sm text-gray-600">
-                  Users feel &quot;lost&quot; in AR. Standard UI overlays (like
-                  &quot;Add to Cart&quot;) need to be persistent but
-                  unobtrusive.
+                  <span className="text-red-500 font-medium">Problem:</span>{' '}
+                  Paying for transactions is confusing.
+                  <br />
+                  <span className="text-green-600 font-medium">
+                    Solution:
+                  </span>{' '}
+                  Gasless transactions (relayers) so users just see
+                  &quot;Free&quot; or standard credit card checkout.
                 </p>
               </div>
             </div>
@@ -204,86 +228,69 @@ export default function ARKivistProjectPage() {
             <h2 className="text-3xl font-bold mb-8">The Solution</h2>
 
             <div className="mb-12">
-              <h3 className="text-xl font-bold mb-4">
-                1. The Merchant Dashboard
-              </h3>
+              <h3 className="text-xl font-bold mb-4">1. Co-Lab Studio</h3>
               <p className="text-gray-700 mb-6">
-                I designed a clean, drag-and-drop interface for asset
-                management. The focus was on giving immediate feedback on model
-                quality and file size, ensuring performant WebAR experiences.
+                A drag-and-drop tool where creators can design customized
+                merchandise. Behind the scenes, these items are minted as
+                digital assets, proving authenticity and ownership history on
+                the blockchain.
               </p>
-              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400">
-                {/* Placeholder for Dashboard UI Image */}
-                [Merchant Dashboard UI - Drag & Drop Flow]
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Creator Customization Interface]
               </div>
             </div>
 
             <div className="mb-12">
               <h3 className="text-xl font-bold mb-4">
-                2. The AR Viewer Interface
+                2. The Engagement Engine
               </h3>
               <p className="text-gray-700 mb-6">
-                The mobile viewer needed to be intuitive. I introduced a
-                &quot;reticle&quot; placement system and gesture hints that
-                appear only when the user is inactive, reducing cognitive load.
+                We gamified brand loyalty. Users earn points (tokens) for
+                actions like sharing content, attending events, or holding
+                specific items. I designed the dashboard to look like a standard
+                loyalty program, hiding the complex tokenomics.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Placement State]
-                </div>
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Product Interaction]
-                </div>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: User Rewards Dashboard & Progress Tracking]
               </div>
             </div>
-          </section>
 
-          {/* Technical Implementation */}
-          <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">
-              Engineering Collaboration
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Working closely with engineers, we had to solve for the
-              constraints of mobile browsers.
-            </p>
-            <div className="bg-gray-900 text-gray-300 p-8 rounded-xl font-mono text-sm">
-              <p className="mb-4">
-                <span className="text-green-400">{'// Challenge:'}</span>{' '}
-                High-poly models crashing iOS Safari.
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-4">
+                3. Direct Engagement Hub
+              </h3>
+              <p className="text-gray-700 mb-6">
+                A filtered feed where creators can reach their top holders
+                directly, bypassing social media algorithms. This
+                &quot;exclusive club&quot; feel was key to the &quot;Build a
+                Cult&quot; value proposition.
               </p>
-              <p className="mb-4">
-                <span className="text-purple-400">{'// Solution:'}</span>{' '}
-                Implemented Draco compression in the pipeline, reducing file
-                sizes by ~85% without visible quality loss.
-              </p>
-              <p>
-                <span className="text-blue-400">{'// Impact:'}</span> Load times
-                dropped from 8s to 1.2s on 4G networks.
-              </p>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Community Feed & Token-Gated Content]
+              </div>
             </div>
           </section>
 
           {/* Impact */}
           <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-8">Results & Impact</h2>
+            <h2 className="text-3xl font-bold mb-8">Early Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">40%</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">45%</p>
                 <p className="text-gray-500 text-sm">
-                  Increase in time-on-page
+                  Participation Rate (Rollin Bagels Pilot)
                 </p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">25%</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">40+</p>
                 <p className="text-gray-500 text-sm">
-                  Uplift in conversion rate
+                  Organic UGC Pieces Generated
                 </p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">3x</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">0</p>
                 <p className="text-gray-500 text-sm">
-                  Faster deployment for brands
+                  Wallets Manually Connected (Success!)
                 </p>
               </div>
             </div>
@@ -293,11 +300,12 @@ export default function ARKivistProjectPage() {
           <section className={`mb-16 ${fadeInUp(isLoaded)}`}>
             <h2 className="text-2xl font-bold mb-4">Reflection</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Designing for AR requires a shift from 2D pixel-perfect thinking
-              to spatial understanding. The biggest takeaway was that{' '}
-              <strong>instructional design</strong> is just as important as the
-              visual interface in AR—users need to be taught how to interact
-              with the space, not just the UI.
+              MAGNETIQ proved that{' '}
+              <strong>technology should be invisible</strong>. The most
+              successful Web3 products will be the ones where users don&apos;t
+              even know they are using Web3. By abstracting away the complexity,
+              we allowed creators to focus on what matters: building genuine
+              connection.
             </p>
           </section>
         </article>

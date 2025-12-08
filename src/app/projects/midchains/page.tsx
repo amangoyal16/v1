@@ -1,21 +1,20 @@
 'use client';
 
 // TODO: REVIEW AND UPDATE CASE STUDY CONTENT
-// 1. Replace placeholder images with actual project artifacts (wireframes, user research, final UI)
+// 1. Replace placeholder images with actual project artifacts (OTC Dashboard, Mobile App Screens, Admin Panel)
 // 2. Verify specific metrics in 'Results & Impact' section
-// 3. Update 'My Role' and 'Team' sections with actual contributors
-// 4. Validate technical details in 'Engineering Challenges'
+// 3. Confirm technical stack details
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePageAnimation, fadeInUp, fadeIn } from '@/hooks/usePageAnimation';
 import { ArrowUpRightIcon, BackArrowIcon } from '@/components/Icons';
 
-export default function ARKivistProjectPage() {
+export default function MidChainsProjectPage() {
   const isLoaded = usePageAnimation();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-green-100 selection:text-green-900">
+    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-indigo-100 selection:text-indigo-900">
       <main className="container mx-auto px-6 py-16 max-w-5xl">
         {/* Navigation */}
         <div
@@ -41,21 +40,22 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '200ms' }}
         >
           <div className="flex flex-wrap gap-3 text-sm font-medium tracking-wide uppercase text-gray-500 mb-6">
-            <span className="text-green-600">Product Design</span>
+            <span className="text-indigo-600">FinTech Product Design</span>
             <span>•</span>
-            <span>WebAR Strategy</span>
+            <span>Institutional Crypto</span>
             <span>•</span>
-            <span>2024</span>
+            <span>2022 - 2023</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-gray-900 leading-[1.1]">
-            ARKivist: Democratizing <br className="hidden md:block" /> Immersive
-            Commerce
+            MidChains: <br className="hidden md:block" /> Institutional-Grade{' '}
+            <br className="hidden md:block" /> Crypto Trading
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-            A plug-and-play WebAR platform empowering brands to deploy immersive
-            product experiences instantly—no app download required.
+            Designing a fully regulated ecosystem (Web, Mobile, Admin) for
+            high-net-worth individuals and institutions to trade digital assets
+            securely.
           </p>
         </header>
 
@@ -65,13 +65,21 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '300ms' }}
         >
           <div className="relative overflow-hidden rounded-3xl bg-gray-50 aspect-[16/9] shadow-sm border border-gray-100">
+            {/* TODO: Add actual project screenshot */}
+            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-slate-50">
+              <span className="text-lg">
+                [Hero Image: MidChains Trading Terminal & Mobile App]
+              </span>
+            </div>
+            {/* 
             <Image
-              src="/projects/ARKivist-desktop.png"
-              alt="ARKivist Platform Interface"
+              src="/projects/midchains-hero.png" 
+              alt="MidChains Platform Interface"
               fill
               className="object-cover"
               priority
-            />
+            /> 
+            */}
           </div>
         </div>
 
@@ -88,31 +96,31 @@ export default function ARKivistProjectPage() {
             </h3>
             <p className="text-base font-medium">Lead Product Designer</p>
             <p className="text-sm text-gray-500 mt-1">
-              UX Research, UI Design, Prototyping
+              Web, Mobile, & Admin Design
             </p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Timeline
             </h3>
-            <p className="text-base font-medium">4 Months</p>
-            <p className="text-sm text-gray-500 mt-1">Jan 2024 - April 2024</p>
+            <p className="text-base font-medium">10 Months</p>
+            <p className="text-sm text-gray-500 mt-1">Full-Cycle Development</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Team
             </h3>
-            <p className="text-base font-medium">1 PM, 2 Engineers</p>
-            <p className="text-sm text-gray-500 mt-1">
-              Cross-functional collaboration
-            </p>
+            <p className="text-base font-medium">Cross-Functional</p>
+            <p className="text-sm text-gray-500 mt-1">PM, Devs, Compliance</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Platform
             </h3>
-            <p className="text-base font-medium">Web (Mobile & Desktop)</p>
-            <p className="text-sm text-gray-500 mt-1">React, WebXR, Three.js</p>
+            <p className="text-base font-medium">Multi-Platform Ecosystem</p>
+            <p className="text-sm text-gray-500 mt-1">
+              iOS, Android, Web, Admin
+            </p>
           </div>
         </section>
 
@@ -123,17 +131,18 @@ export default function ARKivistProjectPage() {
             className={`mb-24 ${fadeInUp(isLoaded)}`}
             style={{ transitionDelay: '500ms' }}
           >
-            <h2 className="text-3xl font-bold mb-6">The Problem</h2>
+            <h2 className="text-3xl font-bold mb-6">The Challenge</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Augmented Reality (AR) in e-commerce has historically suffered
-              from high friction. Users were forced to download heavy native
-              apps just to view a single product in their space, leading to
-              massive drop-off rates.
+              Institutional investors and High Net Worth Individuals (HNWIs) in
+              the Middle East lacked a regulated, secure platform to trade
+              digital assets. Global exchanges were too complex or
+              non-compliant, while local options lacked the sophistication of
+              professional trading tools.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed bg-gray-50 p-6 rounded-xl border-l-4 border-green-500 italic">
-              &quot;60% of users abandon an AR experience if it requires an app
-              download. Brands wanted the engagement of AR without the friction
-              of the App Store.&quot;
+            <p className="text-lg text-gray-700 leading-relaxed bg-indigo-50 p-6 rounded-xl border-l-4 border-indigo-500 italic">
+              &quot;Trust is our currency. We needed a design system that
+              projected the stability of a Swiss bank with the speed of a crypto
+              exchange.&quot;
             </p>
           </section>
 
@@ -143,20 +152,20 @@ export default function ARKivistProjectPage() {
             <ul className="space-y-6">
               {[
                 {
-                  title: 'Eliminate Friction',
-                  desc: 'Enable instant AR experiences directly in the mobile browser using WebXR.',
+                  title: 'Unified Ecosystem',
+                  desc: 'Design a cohesive experience across three distinct platforms: a pro-trading Web App, a simplified Mobile App, and a robust Admin Dashboard.',
                 },
                 {
-                  title: 'Simplify Integration',
-                  desc: 'Create a "low-code" dashboard for brands to upload 3D assets and generate embeddable snippets.',
+                  title: 'Regulatory Compliance',
+                  desc: 'Integrate complex KYC/AML workflows (required by VARA) without destroying conversion rates.',
                 },
                 {
-                  title: 'Drive Conversion',
-                  desc: 'Design clear calls-to-action within the AR view to bridge the gap between visualization and purchase.',
+                  title: 'Institutional OTC',
+                  desc: 'Build a bespoke "Request for Quote" (RFQ) system for large-block trades that avoids market slippage.',
                 },
               ].map((goal, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center font-bold text-sm">
                     {i + 1}
                   </div>
                   <div>
@@ -170,30 +179,30 @@ export default function ARKivistProjectPage() {
             </ul>
           </section>
 
-          {/* Research & Discovery */}
+          {/* Strategy & Scope */}
           <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">Discovery & Insights</h2>
+            <h2 className="text-3xl font-bold mb-6">Scope & Strategy</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We conducted interviews with 15 e-commerce managers and analyzed 5
-              competitor platforms. The discovery phase revealed that while the
-              technology was the main barrier, the *workflow* for content
-              management was equally broken.
+              Over 10 months, I led the design charge for the entire product
+              suite. This wasn&apos;t just a reskin; it was building the
+              foundational UX for a regulated financial institution.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 1: Asset Pipeline</h4>
+                <h4 className="font-bold mb-2">The Mobile App</h4>
                 <p className="text-sm text-gray-600">
-                  Brands struggle to optimize 3D models for the web. They need
-                  automated compression tools built-in.
+                  Designed for on-the-go monitoring and quick execution. We
+                  prioritized &quot;glanceability&quot; of portfolio value and
+                  simplified the buy/sell flow to 3 taps.
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 2: Contextual UI</h4>
+                <h4 className="font-bold mb-2">The Admin Portal</h4>
                 <p className="text-sm text-gray-600">
-                  Users feel &quot;lost&quot; in AR. Standard UI overlays (like
-                  &quot;Add to Cart&quot;) need to be persistent but
-                  unobtrusive.
+                  Often overlooked, the internal tools needed love too. I
+                  designed the compliance dashboard that allows operations teams
+                  to approve KYC documents 50% faster.
                 </p>
               </div>
             </div>
@@ -205,62 +214,47 @@ export default function ARKivistProjectPage() {
 
             <div className="mb-12">
               <h3 className="text-xl font-bold mb-4">
-                1. The Merchant Dashboard
+                1. The OTC Trading Desk
               </h3>
               <p className="text-gray-700 mb-6">
-                I designed a clean, drag-and-drop interface for asset
-                management. The focus was on giving immediate feedback on model
-                quality and file size, ensuring performant WebAR experiences.
+                For institutional clients moving millions, standard order books
+                don&apos;t work. I designed a &quot;Request for Quote&quot;
+                interface where users input their trade size and receive a
+                locked-in price for 10 seconds, ensuring certainty of execution.
               </p>
-              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400">
-                {/* Placeholder for Dashboard UI Image */}
-                [Merchant Dashboard UI - Drag & Drop Flow]
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: OTC Request-for-Quote Interface]
               </div>
             </div>
 
             <div className="mb-12">
               <h3 className="text-xl font-bold mb-4">
-                2. The AR Viewer Interface
+                2. Seamless Onboarding (KYC)
               </h3>
               <p className="text-gray-700 mb-6">
-                The mobile viewer needed to be intuitive. I introduced a
-                &quot;reticle&quot; placement system and gesture hints that
-                appear only when the user is inactive, reducing cognitive load.
+                Compliance is heavy, but the UX shouldn&apos;t be. We broke the
+                KYC process into bite-sized &quot;progressive disclosure&quot;
+                steps, using clear progress indicators and auto-saving drafts to
+                reduce abandonment.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Placement State]
-                </div>
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Product Interaction]
-                </div>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Mobile KYC Flow Steps]
               </div>
             </div>
-          </section>
 
-          {/* Technical Implementation */}
-          <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">
-              Engineering Collaboration
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Working closely with engineers, we had to solve for the
-              constraints of mobile browsers.
-            </p>
-            <div className="bg-gray-900 text-gray-300 p-8 rounded-xl font-mono text-sm">
-              <p className="mb-4">
-                <span className="text-green-400">{'// Challenge:'}</span>{' '}
-                High-poly models crashing iOS Safari.
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-4">
+                3. Developer Collaboration
+              </h3>
+              <p className="text-gray-700 mb-6">
+                I didn&apos;t just hand off Figma files. I worked side-by-side
+                with developers to build a shared component library (React/React
+                Native), ensuring that the button verified on iOS looked exactly
+                like the button on the Web Dashboard.
               </p>
-              <p className="mb-4">
-                <span className="text-purple-400">{'// Solution:'}</span>{' '}
-                Implemented Draco compression in the pipeline, reducing file
-                sizes by ~85% without visible quality loss.
-              </p>
-              <p>
-                <span className="text-blue-400">{'// Impact:'}</span> Load times
-                dropped from 8s to 1.2s on 4G networks.
-              </p>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [Image: Design System / Component Library Spec]
+              </div>
             </div>
           </section>
 
@@ -269,21 +263,21 @@ export default function ARKivistProjectPage() {
             <h2 className="text-3xl font-bold mb-8">Results & Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">40%</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">3</p>
                 <p className="text-gray-500 text-sm">
-                  Increase in time-on-page
+                  Platforms Launched (Web, Mobile, Admin)
                 </p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">25%</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">50%</p>
                 <p className="text-gray-500 text-sm">
-                  Uplift in conversion rate
+                  Reduction in KYC Processing Time
                 </p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">3x</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">VARA</p>
                 <p className="text-gray-500 text-sm">
-                  Faster deployment for brands
+                  Fully Compliant UX Design
                 </p>
               </div>
             </div>
@@ -293,11 +287,11 @@ export default function ARKivistProjectPage() {
           <section className={`mb-16 ${fadeInUp(isLoaded)}`}>
             <h2 className="text-2xl font-bold mb-4">Reflection</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Designing for AR requires a shift from 2D pixel-perfect thinking
-              to spatial understanding. The biggest takeaway was that{' '}
-              <strong>instructional design</strong> is just as important as the
-              visual interface in AR—users need to be taught how to interact
-              with the space, not just the UI.
+              Designing for MidChains taught me that in FinTech,{' '}
+              <strong>trust is the ultimate UX feature</strong>. Every
+              interaction, from the color palette to the speed of a confirmation
+              animation, must reinforce reliability and security for high-value
+              users.
             </p>
           </section>
         </article>

@@ -1,21 +1,20 @@
 'use client';
 
 // TODO: REVIEW AND UPDATE CASE STUDY CONTENT
-// 1. Replace placeholder images with actual project artifacts (wireframes, user research, final UI)
+// 1. Replace placeholder images with actual project artifacts (Extension Popup, Rewards Dashboard, ZK Flow Diagram)
 // 2. Verify specific metrics in 'Results & Impact' section
-// 3. Update 'My Role' and 'Team' sections with actual contributors
-// 4. Validate technical details in 'Engineering Challenges'
+// 3. Confirm technical stack details
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePageAnimation, fadeInUp, fadeIn } from '@/hooks/usePageAnimation';
 import { ArrowUpRightIcon, BackArrowIcon } from '@/components/Icons';
 
-export default function ARKivistProjectPage() {
+export default function HiveProjectPage() {
   const isLoaded = usePageAnimation();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-green-100 selection:text-green-900">
+    <div className="min-h-screen bg-white text-gray-900 font-sans selection:bg-yellow-100 selection:text-yellow-900">
       <main className="container mx-auto px-6 py-16 max-w-5xl">
         {/* Navigation */}
         <div
@@ -41,21 +40,22 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '200ms' }}
         >
           <div className="flex flex-wrap gap-3 text-sm font-medium tracking-wide uppercase text-gray-500 mb-6">
-            <span className="text-green-600">Product Design</span>
+            <span className="text-yellow-600">Web3 Product Design</span>
             <span>•</span>
-            <span>WebAR Strategy</span>
+            <span>Data Sovereignty</span>
             <span>•</span>
             <span>2024</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 text-gray-900 leading-[1.1]">
-            ARKivist: Democratizing <br className="hidden md:block" /> Immersive
-            Commerce
+            Hive: <br className="hidden md:block" /> Own Your Data,{' '}
+            <br className="hidden md:block" /> Earn Your Worth
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-            A plug-and-play WebAR platform empowering brands to deploy immersive
-            product experiences instantly—no app download required.
+            A privacy-first Chrome Extension powered by Polybase and ZK-proofs
+            that enables users to monetize their browsing data directly with
+            brands—without compromising their identity.
           </p>
         </header>
 
@@ -65,13 +65,21 @@ export default function ARKivistProjectPage() {
           style={{ transitionDelay: '300ms' }}
         >
           <div className="relative overflow-hidden rounded-3xl bg-gray-50 aspect-[16/9] shadow-sm border border-gray-100">
+            {/* TODO: Add actual project screenshot */}
+            <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-slate-50">
+              <span className="text-lg">
+                [Hero Image: Hive Extension Popup & Data Dashboard]
+              </span>
+            </div>
+            {/* 
             <Image
-              src="/projects/ARKivist-desktop.png"
-              alt="ARKivist Platform Interface"
+              src="/projects/hive-hero.png" 
+              alt="Hive Platform Interface"
               fill
               className="object-cover"
               priority
-            />
+            /> 
+            */}
           </div>
         </div>
 
@@ -88,31 +96,29 @@ export default function ARKivistProjectPage() {
             </h3>
             <p className="text-base font-medium">Lead Product Designer</p>
             <p className="text-sm text-gray-500 mt-1">
-              UX Research, UI Design, Prototyping
+              UX/UI, Extension Design
             </p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Timeline
             </h3>
-            <p className="text-base font-medium">4 Months</p>
-            <p className="text-sm text-gray-500 mt-1">Jan 2024 - April 2024</p>
+            <p className="text-base font-medium">6 Months</p>
+            <p className="text-sm text-gray-500 mt-1">Concept to Beta</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
               Team
             </h3>
-            <p className="text-base font-medium">1 PM, 2 Engineers</p>
-            <p className="text-sm text-gray-500 mt-1">
-              Cross-functional collaboration
-            </p>
+            <p className="text-base font-medium">3 Engineers, 1 PM</p>
+            <p className="text-sm text-gray-500 mt-1">Web3 Startup</p>
           </div>
           <div>
             <h3 className="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3">
-              Platform
+              Tech Stack
             </h3>
-            <p className="text-base font-medium">Web (Mobile & Desktop)</p>
-            <p className="text-sm text-gray-500 mt-1">React, WebXR, Three.js</p>
+            <p className="text-base font-medium">Polybase, ZK-Snarks</p>
+            <p className="text-sm text-gray-500 mt-1">Chrome Ext, React</p>
           </div>
         </section>
 
@@ -125,15 +131,15 @@ export default function ARKivistProjectPage() {
           >
             <h2 className="text-3xl font-bold mb-6">The Problem</h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Augmented Reality (AR) in e-commerce has historically suffered
-              from high friction. Users were forced to download heavy native
-              apps just to view a single product in their space, leading to
-              massive drop-off rates.
+              The current internet is built on data harvesting. Tech giants
+              track every click and sell that data to advertisers for billions,
+              while the user—the source of that value—gets nothing but privacy
+              violations and spam.
             </p>
-            <p className="text-lg text-gray-700 leading-relaxed bg-gray-50 p-6 rounded-xl border-l-4 border-green-500 italic">
-              &quot;60% of users abandon an AR experience if it requires an app
-              download. Brands wanted the engagement of AR without the friction
-              of the App Store.&quot;
+            <p className="text-lg text-gray-700 leading-relaxed bg-yellow-50 p-6 rounded-xl border-l-4 border-yellow-500 italic">
+              &quot;Users are the product. We wanted to flip the script and make
+              users the *partners*, giving them control over what they share and
+              paying them for it.&quot;
             </p>
           </section>
 
@@ -143,20 +149,20 @@ export default function ARKivistProjectPage() {
             <ul className="space-y-6">
               {[
                 {
-                  title: 'Eliminate Friction',
-                  desc: 'Enable instant AR experiences directly in the mobile browser using WebXR.',
+                  title: 'Data Sovereignty',
+                  desc: 'Build a system where users own their data encrypted on a decentralized database (Polybase), not on our servers.',
                 },
                 {
-                  title: 'Simplify Integration',
-                  desc: 'Create a "low-code" dashboard for brands to upload 3D assets and generate embeddable snippets.',
+                  title: 'Privacy-Preserving Targeting',
+                  desc: 'Enable brands to target specific user personas using Zero-Knowledge (ZK) proofs without ever revealing individual identities.',
                 },
                 {
-                  title: 'Drive Conversion',
-                  desc: 'Design clear calls-to-action within the AR view to bridge the gap between visualization and purchase.',
+                  title: 'Value Redistribution',
+                  desc: 'Create a gamified economy where the ad budget brands save on middlemen goes directly to the users.',
                 },
               ].map((goal, i) => (
                 <li key={i} className="flex gap-4 items-start">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold text-sm">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center font-bold text-sm">
                     {i + 1}
                   </div>
                   <div>
@@ -172,28 +178,31 @@ export default function ARKivistProjectPage() {
 
           {/* Research & Discovery */}
           <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">Discovery & Insights</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              The &quot;Glass Box&quot; Concept
+            </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              We conducted interviews with 15 e-commerce managers and analyzed 5
-              competitor platforms. The discovery phase revealed that while the
-              technology was the main barrier, the *workflow* for content
-              management was equally broken.
+              Trust was our biggest hurdle. Users are skeptical of any tool that
+              asks for data. We designed around the concept of a &quot;Glass
+              Box&quot;—total transparency.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 1: Asset Pipeline</h4>
+                <h4 className="font-bold mb-2">Insight 1: Control</h4>
                 <p className="text-sm text-gray-600">
-                  Brands struggle to optimize 3D models for the web. They need
-                  automated compression tools built-in.
+                  Users need a &quot;Kill Switch.&quot; I designed a prominent
+                  toggle in the extension to instantly stop data collection,
+                  giving users a sense of safety and control.
                 </p>
               </div>
               <div className="bg-gray-50 p-6 rounded-xl">
-                <h4 className="font-bold mb-2">Insight 2: Contextual UI</h4>
+                <h4 className="font-bold mb-2">Insight 2: Visibility</h4>
                 <p className="text-sm text-gray-600">
-                  Users feel &quot;lost&quot; in AR. Standard UI overlays (like
-                  &quot;Add to Cart&quot;) need to be persistent but
-                  unobtrusive.
+                  We visualized the data being stored in real-time. Instead of a
+                  hidden database, users see a &quot;Data Vault&quot; UI showing
+                  exactly what tags (e.g., &quot;Interested in Sneakers&quot;)
+                  were generated.
                 </p>
               </div>
             </div>
@@ -205,62 +214,47 @@ export default function ARKivistProjectPage() {
 
             <div className="mb-12">
               <h3 className="text-xl font-bold mb-4">
-                1. The Merchant Dashboard
+                1. The Chrome Extension
               </h3>
               <p className="text-gray-700 mb-6">
-                I designed a clean, drag-and-drop interface for asset
-                management. The focus was on giving immediate feedback on model
-                quality and file size, ensuring performant WebAR experiences.
+                The primary touchpoint. It passively analyzes browsing behavior
+                (locally) to generate interest tags. I kept the UI minimal,
+                focusing on the &quot;Active/Paused&quot; status and daily
+                earnings ticker.
               </p>
-              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400">
-                {/* Placeholder for Dashboard UI Image */}
-                [Merchant Dashboard UI - Drag & Drop Flow]
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Extension Popup & Status Toggle]
               </div>
             </div>
 
             <div className="mb-12">
               <h3 className="text-xl font-bold mb-4">
-                2. The AR Viewer Interface
+                2. The Data Vault (Polybase Integration)
               </h3>
               <p className="text-gray-700 mb-6">
-                The mobile viewer needed to be intuitive. I introduced a
-                &quot;reticle&quot; placement system and gesture hints that
-                appear only when the user is inactive, reducing cognitive load.
+                This is where the Web3 magic happens. Users can view their
+                Polybase record. I designed a friendly interface over the raw
+                database, allowing users to delete specific data points they
+                don&apos;t want to share.
               </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Placement State]
-                </div>
-                <div className="bg-gray-100 rounded-xl aspect-[9/16] flex items-center justify-center text-gray-400 text-center p-4">
-                  [Mobile AR View - Product Interaction]
-                </div>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Personal Data Vault & Privacy Controls]
               </div>
             </div>
-          </section>
 
-          {/* Technical Implementation */}
-          <section className={`mb-24 ${fadeInUp(isLoaded)}`}>
-            <h2 className="text-3xl font-bold mb-6">
-              Engineering Collaboration
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Working closely with engineers, we had to solve for the
-              constraints of mobile browsers.
-            </p>
-            <div className="bg-gray-900 text-gray-300 p-8 rounded-xl font-mono text-sm">
-              <p className="mb-4">
-                <span className="text-green-400">{'// Challenge:'}</span>{' '}
-                High-poly models crashing iOS Safari.
+            <div className="mb-12">
+              <h3 className="text-xl font-bold mb-4">
+                3. Gamified Rewards System
+              </h3>
+              <p className="text-gray-700 mb-6">
+                To encourage participation, we introduced a tier system. As
+                users share high-value data categories (e.g., purchase intent
+                vs. general browsing), they level up to earn higher APY on their
+                data dividends.
               </p>
-              <p className="mb-4">
-                <span className="text-purple-400">{'// Solution:'}</span>{' '}
-                Implemented Draco compression in the pipeline, reducing file
-                sizes by ~85% without visible quality loss.
-              </p>
-              <p>
-                <span className="text-blue-400">{'// Impact:'}</span> Load times
-                dropped from 8s to 1.2s on 4G networks.
-              </p>
+              <div className="bg-gray-100 rounded-xl aspect-[16/10] flex items-center justify-center mb-4 text-gray-400 border border-dashed border-gray-300">
+                [UI: Rewards Tier Progress & Earnings Graph]
+              </div>
             </div>
           </section>
 
@@ -269,21 +263,17 @@ export default function ARKivistProjectPage() {
             <h2 className="text-3xl font-bold mb-8">Results & Impact</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">40%</p>
-                <p className="text-gray-500 text-sm">
-                  Increase in time-on-page
-                </p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">10k+</p>
+                <p className="text-gray-500 text-sm">Early Beta Signups</p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
-                <p className="text-4xl font-bold text-gray-900 mb-2">25%</p>
-                <p className="text-gray-500 text-sm">
-                  Uplift in conversion rate
-                </p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">100%</p>
+                <p className="text-gray-500 text-sm">User Data Ownership</p>
               </div>
               <div className="p-6 border border-gray-100 rounded-2xl shadow-sm">
                 <p className="text-4xl font-bold text-gray-900 mb-2">3x</p>
                 <p className="text-gray-500 text-sm">
-                  Faster deployment for brands
+                  Brand Engagement vs Traditional Ads
                 </p>
               </div>
             </div>
@@ -293,11 +283,12 @@ export default function ARKivistProjectPage() {
           <section className={`mb-16 ${fadeInUp(isLoaded)}`}>
             <h2 className="text-2xl font-bold mb-4">Reflection</h2>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Designing for AR requires a shift from 2D pixel-perfect thinking
-              to spatial understanding. The biggest takeaway was that{' '}
-              <strong>instructional design</strong> is just as important as the
-              visual interface in AR—users need to be taught how to interact
-              with the space, not just the UI.
+              Hive taught me that privacy isn&apos;t just about hiding data;
+              it&apos;s about <strong>agency</strong>. Users are willing to
+              share data if they understand <em>what</em> they are sharing,{' '}
+              <em>who</em> gets it, and <em>what</em> they get in return.
+              Transparent design is the key to unlocking the zero-party data
+              economy.
             </p>
           </section>
         </article>

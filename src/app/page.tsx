@@ -80,9 +80,9 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing">
+      {/* <section id="pricing">
         <Pricing />
-      </section>
+      </section> */}
 
       {/* How Can I Help You Section */}
       <section id="services" className="container mx-auto px-6 py-16 max-w-2xl">
