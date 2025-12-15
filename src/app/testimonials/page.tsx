@@ -21,7 +21,7 @@ export default function TestimonialsPage() {
         {/* Testimonials Grid */}
         <div className="space-y-12">
           {testimonials
-            .slice(0, 3)
+            .slice(0, 4)
             .map(
               (testimonial) =>
                 testimonial.is_visible && (

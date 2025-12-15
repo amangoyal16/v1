@@ -8,7 +8,7 @@ import {
   LinkedInIcon,
   PeerlistIcon,
 } from '@/components/Icons';
-import { calLink, emailLink } from '@/constants/info';
+import { calLink, emailLink, cvLink } from '@/constants/info';
 import Link from 'next/link';
 import { toast } from 'sonner';
 
@@ -158,6 +158,23 @@ export default function Footer() {
             </div>
             <span className="text-gray-600 group-hover:text-gray-900 transition-colors duration-300">
               Design insights & experiences
+            </span>
+          </a>
+
+          {/* Resume */}
+          <a
+            href={cvLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-between group hover:bg-gray-50 -mx-4 px-4 py-3 rounded-lg transition-all duration-300 group-hover/social:opacity-100 group-hover/social:[&:not(:hover)]:opacity-40"
+          >
+            <div className="flex items-center gap-4">
+              <span className="text-lg font-medium text-gray-900 ml-10">
+                Resume / CV
+              </span>
+            </div>
+            <span className="text-gray-600 group-hover:text-gray-900 transition-colors duration-300">
+              PDF Download
             </span>
           </a>
         </div>

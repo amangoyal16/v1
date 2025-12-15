@@ -10,7 +10,8 @@ import {
   fadeInScale,
   getStaggerDelay,
 } from '@/hooks/usePageAnimation';
-import { calLink } from '@/constants/info';
+import { calLink, cvLink } from '@/constants/info';
+import { ArrowDownIcon } from 'lucide-react';
 
 export default function Hero() {
   const isLoaded = usePageAnimation(200);
@@ -109,14 +110,24 @@ export default function Hero() {
           role="navigation"
           aria-label="Primary actions"
         >
-          <Link
+          {/* <Link
             href={calLink}
             className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
             title="Contact Aman Goyal for product design services"
           >
-            Book a Free Discovery Call
+            Book a Discovery Call
             <ArrowUpRightIcon width="18" height="18" aria-hidden="true" />
-          </Link>
+          </Link> */}
+            <a
+            href={cvLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-800 transition-all duration-300 hover:scale-105 active:scale-95"
+            title="Download Aman Goyal's Resume"
+          >
+            Download CV
+            <ArrowDownIcon width="18" height="18" aria-hidden="true" />
+          </a>
           <Link
             href="/about"
             className="inline-flex items-center justify-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95"
@@ -124,6 +135,7 @@ export default function Hero() {
           >
             More about me
           </Link>
+        
         </nav>
       </div>
     </section>

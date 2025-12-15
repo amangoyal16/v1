@@ -90,6 +90,17 @@ export const testimonials: Testimonial[] = [
     image: '/founders/akash.jpeg',
     is_visible: true,
   },
+  {
+    id: 'Pratik Ranjan',
+    quote: `Aman and I worked together on several projects like college e- magazine,vectors,logos, brochures etc.and I was lucky to call him my coworker. He consistently gave 100 percent effort to the team and played a significant role in ensuring that we completed assignments on time. 
+
+He had excellent time management skills and had a knack for keeping everyone calm and productive during intense crunch periods. We miss his smile in the college! Any team would be lucky to have Aman, and I couldn’t recommend him more for any business looking for new talent.`,
+    name: 'Pratik Ranjan',
+    title: 'Senior Product Designer',
+    company: '',
+    image: '/founders/pratik.jpeg',
+    is_visible: true,
+  },
 
   // Need to get these
   {

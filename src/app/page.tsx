@@ -68,7 +68,7 @@ export default function Home() {
         </div>
 
         {/* Read More Button */}
-        {/* <div className="mt-12 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <a
             href="/testimonials"
             className="inline-flex items-center gap-2 border border-gray-300 text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-sm sm:text-base font-medium hover:bg-gray-50 hover:border-gray-400 transition-all duration-300 hover:scale-105 active:scale-95 hover:shadow-sm"
@@ -76,7 +76,7 @@ export default function Home() {
             Read More Testimonials
             <ArrowUpRightIcon width="20" height="20" />
           </a>
-        </div> */}
+        </div>
       </section>
 
       {/* Pricing Section */}
