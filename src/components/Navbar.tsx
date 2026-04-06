@@ -1,6 +1,6 @@
 'use client';
 
-import { calLink, projectsLink } from '@/constants/info';
+import { calLink, projectsLink, cvLink } from '@/constants/info';
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -25,6 +25,14 @@ export default function Navbar() {
 
           {/* Desktop Navigation */}
           <div className=" md:flex items-center space-x-2 md:space-x-6">
+            <a
+              href={cvLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-black text-sm font-medium transition-colors duration-200"
+            >
+              Resume
+            </a>
             <Link
               href={projectsLink}
               target="_blank"
@@ -32,12 +40,12 @@ export default function Navbar() {
             >
               View Work
             </Link>
-            <Link
+            {/* <Link
               href={calLink}
               className="bg-black whitespace-nowrap text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-all duration-200 hover:scale-105 active:scale-95"
             >
               Book an Intro Call
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
