@@ -134,7 +134,7 @@ export default function BillieBotProjectPage() {
               Student mental health services are overwhelmed. Wait times for counselors can be weeks long. Students needed an immediate, judgment-free outlet for low-acuity stress and anxiety, available 24/7.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed bg-blue-50 p-6 rounded-xl border-l-4 border-blue-500 italic">
-              &quot;The goal was not to replace therapy, but to bridge the gap. We needed to build trust with a generation that is skepticism of corporate 'wellness' tools.&quot;
+              &quot;The goal was not to replace therapy, but to bridge the gap. We needed to build trust with a generation that is skepticism of corporate &apos;wellness&apos; tools.&quot;
             </p>
           </section>
 
@@ -153,7 +153,7 @@ export default function BillieBotProjectPage() {
                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm">2</div>
                    <div>
                      <h4 className="text-lg font-bold text-gray-900">Conversational Warmth</h4>
-                     <p className="text-gray-600">Fine-tune the AI persona to be empathetic but not clinical, avoiding "therapist-speak".</p>
+                     <p className="text-gray-600">Fine-tune the AI persona to be empathetic but not clinical, avoiding &quot;therapist-speak&quot;.</p>
                    </div>
                  </div>
             </div>
@@ -175,7 +175,7 @@ export default function BillieBotProjectPage() {
              </div>
              <p className="text-gray-700 mb-6 font-medium">Safety Guardrails</p>
              <p className="text-gray-700 mb-6">
-               Critical to the product was the "SOS" logic. If the AI detects intent of self-harm, the UI immediately shifts to crisis mode, offering direct connection to campus safety or national hotlines.
+               Critical to the product was the &quot;SOS&quot; logic. If the AI detects intent of self-harm, the UI immediately shifts to crisis mode, offering direct connection to campus safety or national hotlines.
              </p>
           </section>
 

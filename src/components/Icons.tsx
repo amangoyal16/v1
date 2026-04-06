@@ -410,7 +410,7 @@ export const CloseIcon: React.FC<IconProps> = ({
   </svg>
 );
 
-export default {
+const Icons = {
   ArrowUpRightIcon,
   EmailIcon,
   TwitterIcon,
@@ -427,3 +427,5 @@ export default {
   HamburgerIcon,
   CloseIcon,
 };
+
+export default Icons;

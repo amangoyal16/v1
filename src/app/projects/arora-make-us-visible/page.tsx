@@ -134,7 +134,7 @@ export default function AroraProjectPage() {
               Public monuments historically represent a narrow slice of history. #MakeUsVisible wanted to challenge this narrative by placing digital statues of underrepresented historical figures in prominent public spaces.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed bg-purple-50 p-6 rounded-xl border-l-4 border-purple-500 italic">
-              &quot;We can't always build new physical statues, but we can build infinite digital ones. We needed a platform that made this accessible to anyone with a smartphone.&quot;
+              &quot;We can&apos;t always build new physical statues, but we can build infinite digital ones. We needed a platform that made this accessible to anyone with a smartphone.&quot;
             </p>
           </section>
 

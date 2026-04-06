@@ -51,7 +51,7 @@ export default function FYTProjectPage() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-3xl">
-            [A brief statement about the project's core value proposition and what it achieved.]
+            [A brief statement about the project&apos;s core value proposition and what it achieved.]
           </p>
         </header>
 
