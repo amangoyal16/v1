@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { ArrowUpRightIcon } from '@/components/Icons';
 import { projectsData } from '@/constants/projects';
 import { usePageAnimation } from '@/hooks/usePageAnimation';
@@ -21,6 +22,8 @@ const availableProjectImages = new Set([
   '/projects/Shiseido.png',
   '/projects/hive.png',
 ]);
+
+const listedProjects = projectsData.filter((project) => project.isVisible);
 
 function getProjectInitials(name: string) {
   return name
@@ -170,7 +173,64 @@ export default function ProjectsList({
   description = 'Selected case studies across SaaS, AI, Web3, and immersive products. The goal here is simple: help you scan the work quickly, then open the details that feel most relevant.',
 }: ProjectsListProps) {
   const isLoaded = usePageAnimation(120);
-  const visibleProjects = projectsData.filter((project) => project.isVisible);
+  const [activeSlug, setActiveSlug] = useState(listedProjects[0]?.slug ?? '');
+
+  useEffect(() => {
+    if (listedProjects.length === 0) {
+      return;
+    }
+
+    let frameId = 0;
+
+    const updateActiveProject = () => {
+      frameId = 0;
+
+      const activationOffset = 148;
+      let nextActiveSlug = listedProjects[0].slug;
+
+      for (const project of listedProjects) {
+        const section = document.getElementById(project.slug);
+
+        if (!section) {
+          continue;
+        }
+
+        if (section.getBoundingClientRect().top <= activationOffset) {
+          nextActiveSlug = project.slug;
+        } else {
+          break;
+        }
+      }
+
+      setActiveSlug((currentSlug) =>
+        currentSlug === nextActiveSlug ? currentSlug : nextActiveSlug
+      );
+    };
+
+    const requestActiveProjectUpdate = () => {
+      if (frameId !== 0) {
+        return;
+      }
+
+      frameId = window.requestAnimationFrame(updateActiveProject);
+    };
+
+    requestActiveProjectUpdate();
+
+    window.addEventListener('scroll', requestActiveProjectUpdate, {
+      passive: true,
+    });
+    window.addEventListener('resize', requestActiveProjectUpdate);
+
+    return () => {
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId);
+      }
+
+      window.removeEventListener('scroll', requestActiveProjectUpdate);
+      window.removeEventListener('resize', requestActiveProjectUpdate);
+    };
+  }, []);
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 lg:py-20">
@@ -204,23 +264,45 @@ export default function ProjectsList({
             Browse
           </p>
           <nav className="space-y-3" aria-label="Project index">
-            {visibleProjects.map((project, index) => (
+            {listedProjects.map((project, index) => {
+              const isActive = activeSlug === project.slug;
+
+              return (
               <a
                 key={project.slug}
                 href={`#${project.slug}`}
-                className="group flex items-baseline gap-3 text-sm text-gray-500 transition-colors duration-200 hover:text-gray-900"
+                onClick={() => setActiveSlug(project.slug)}
+                className={cn(
+                  'group flex items-baseline gap-3 border-l pl-3 text-sm transition-[color,border-color,transform] duration-200 ease-out',
+                  isActive
+                    ? 'border-gray-900 text-gray-900'
+                    : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-900'
+                )}
               >
-                <span className="w-6 flex-shrink-0 text-xs text-gray-400">
+                <span
+                  className={cn(
+                    'w-6 flex-shrink-0 text-xs transition-colors duration-200',
+                    isActive ? 'text-gray-900' : 'text-gray-400'
+                  )}
+                >
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <span className="font-medium">{project.name}</span>
+                <span
+                  className={cn(
+                    'transition-all duration-200',
+                    isActive ? 'font-semibold tracking-tight' : 'font-medium'
+                  )}
+                >
+                  {project.name}
+                </span>
               </a>
-            ))}
+              );
+            })}
           </nav>
         </aside>
 
         <div>
-          {visibleProjects.map((project, index) => (
+          {listedProjects.map((project, index) => (
             <ProjectEntry
               key={project.id}
               project={project}
