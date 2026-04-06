@@ -76,7 +76,7 @@ export const projectsData = [
     name: 'Hive',
     description:
       'A privacy-first Chrome Extension powered by Polybase and ZK-proofs that enables users to monetize their browsing data directly with brands—without compromising their identity.',
-    image: '/projects/hive-hero.png', // Placeholder
+    image: '/projects/hive.png',
     slug: 'hive',
     category: 'Web3 / Privacy',
     year: '2024',
@@ -165,17 +165,17 @@ export const projectsData = [
     id: 10,
     name: 'FYT',
     description:
-      '[Product Description Needed] - Please review src/app/projects/fyt/page.tsx to update this content.',
-    image: '/projects/fyt-hero.png', // Placeholder
+      'A mobile-first product currently in development, centered on simplifying everyday interactions with a tighter, more intuitive user flow. A detailed case study is on the way.',
+    image: '/projects/fyt-hero.png',
     slug: 'fyt',
     category: 'Product Design',
-    year: '202X',
+    year: 'In Progress',
     status: 'In Development',
     technologies: ['React', 'Mobile'],
     highlights: [
-      'Metric 1',
-      'Metric 2',
-      'Metric 3',
+      'Mobile-first interaction design',
+      'Early product direction and prototyping',
+      'Case study documentation in progress',
     ],
     isVisible: true,
   },
