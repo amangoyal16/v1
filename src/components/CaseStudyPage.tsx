@@ -2,12 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
 import { ArrowUpRightIcon, BackArrowIcon } from '@/components/Icons';
-import {
-  type CaseStudyData,
-  type CaseStudyMoment,
-} from '@/constants/caseStudies';
+import { type CaseStudyData } from '@/constants/caseStudies';
 import { usePageAnimation } from '@/hooks/usePageAnimation';
 import { cn } from '@/lib/utils';
 
@@ -42,14 +38,12 @@ function ProjectVisual({
   className,
   priority = false,
   objectPosition = 'object-left',
-  overlay,
   showCaption = false,
 }: {
   study: CaseStudyData;
   className?: string;
   priority?: boolean;
   objectPosition?: string;
-  overlay?: ReactNode;
   showCaption?: boolean;
 }) {
   const hasImage = availableProjectImages.has(study.project.image);
@@ -72,20 +66,14 @@ function ProjectVisual({
               sizes="(min-width: 1024px) 72vw, 100vw"
               className={cn('object-cover', objectPosition)}
             />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0.03)_0%,rgba(17,24,39,0.08)_44%,rgba(17,24,39,0.42)_100%)]" />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0.03)_0%,rgba(17,24,39,0.08)_44%,rgba(17,24,39,0.18)_100%)]" />
           </>
         ) : (
           <div className="absolute inset-0 bg-[linear-gradient(135deg,#f5f5f5_0%,#ffffff_52%,#efefef_100%)]">
             <div className="absolute inset-x-8 top-8 border-t border-gray-200" />
-            <div className="absolute left-8 top-12 text-[11px] font-medium uppercase tracking-[0.18em] text-gray-500">
-              {study.visualTitle}
-            </div>
             <div className="absolute left-8 bottom-8">
               <p className="text-[clamp(3.25rem,8vw,6rem)] font-medium tracking-tighter text-gray-900/80">
                 {getProjectInitials(study.project.name)}
-              </p>
-              <p className="mt-3 max-w-[16rem] text-sm leading-6 text-gray-500">
-                {study.project.highlights[0]}
               </p>
             </div>
             <div className="absolute bottom-8 right-8 text-sm font-medium text-gray-400">
@@ -93,8 +81,6 @@ function ProjectVisual({
             </div>
           </div>
         )}
-
-        {overlay && <div className="absolute inset-0">{overlay}</div>}
         <div className="absolute inset-0 rounded-[30px] ring-1 ring-inset ring-black/5" />
       </div>
 
@@ -127,36 +113,8 @@ function SidebarBlock({
   );
 }
 
-function MiniNotes({
-  title,
-  items,
-}: {
-  title: string;
-  items: CaseStudyMoment[];
-}) {
-  return (
-    <div className="space-y-4">
-      <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
-        {title}
-      </p>
-      <div className="space-y-4">
-        {items.map((item) => (
-          <div key={item.title}>
-            <p className="text-sm font-medium text-white">{item.title}</p>
-            <p className="mt-1 text-sm leading-6 text-white/78">
-              {item.description}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-
 export default function CaseStudyPage({ study }: { study: CaseStudyData }) {
   const isLoaded = usePageAnimation(120);
-  const ownership = study.ownership.slice(0, 3);
-  const visualMoments = study.visualMoments.slice(0, 2);
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -207,33 +165,6 @@ export default function CaseStudyPage({ study }: { study: CaseStudyData }) {
               priority
               className="aspect-[16/11] sm:aspect-[16/10]"
               showCaption
-              overlay={
-                <div className="flex h-full flex-col justify-between p-6 sm:p-8">
-                  <div className="flex flex-wrap gap-2">
-                    {study.snapshot.slice(0, 3).map((item) => (
-                      <span
-                        key={item.label}
-                        className="inline-flex items-center rounded-full bg-white/88 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-gray-600 backdrop-blur-sm"
-                      >
-                        {item.value}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="max-w-2xl">
-                    <div className="flex flex-wrap gap-2">
-                      {study.project.highlights.map((highlight) => (
-                        <span
-                          key={highlight}
-                          className="inline-flex items-center rounded-full bg-black/65 px-3 py-1.5 text-sm text-white backdrop-blur-sm"
-                        >
-                          {highlight}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              }
             />
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -241,36 +172,12 @@ export default function CaseStudyPage({ study }: { study: CaseStudyData }) {
                 study={study}
                 className="aspect-[5/4]"
                 objectPosition="object-center"
-                overlay={
-                  <div className="flex h-full items-end p-6">
-                    <div className="max-w-xs">
-                      <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
-                        Challenge
-                      </p>
-                      <p className="mt-3 text-base leading-7 text-white">
-                        {shortenText(study.challenge, 180)}
-                      </p>
-                    </div>
-                  </div>
-                }
               />
 
               <ProjectVisual
                 study={study}
                 className="aspect-[5/4]"
                 objectPosition="object-right"
-                overlay={
-                  <div className="flex h-full items-end p-6">
-                    <div className="max-w-xs">
-                      <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
-                        Approach
-                      </p>
-                      <p className="mt-3 text-base leading-7 text-white">
-                        {shortenText(study.approach, 180)}
-                      </p>
-                    </div>
-                  </div>
-                }
               />
             </div>
 
@@ -278,25 +185,6 @@ export default function CaseStudyPage({ study }: { study: CaseStudyData }) {
               study={study}
               className="aspect-[16/10] sm:aspect-[16/8]"
               objectPosition="object-center"
-              overlay={
-                <div className="flex h-full items-end p-6 sm:p-8">
-                  <div className="grid w-full gap-6 md:grid-cols-[minmax(0,1fr)_260px] md:items-end">
-                    <div className="grid gap-4 sm:grid-cols-3 sm:gap-5">
-                      {ownership.map((item, index) => (
-                        <div key={item.title}>
-                          <p className="text-[11px] font-medium uppercase tracking-[0.18em] text-white/70">
-                            {String(index + 1).padStart(2, '0')}
-                          </p>
-                          <p className="mt-3 text-sm font-medium text-white sm:text-base">
-                            {item.title}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                    <MiniNotes title="Visual Notes" items={visualMoments} />
-                  </div>
-                </div>
-              }
             />
           </div>
 
