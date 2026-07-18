@@ -18,7 +18,6 @@ import Products from '@/components/Products';
 import Blog from '@/components/Blog';
 import ProjectsGrid from '@/components/ProjectsGrid';
 import ClientLogosCarousel from '@/components/ClientLogosCarousel';
-import Pricing from '@/components/Pricing';
 import FloatingBottomNav from '@/components/FloatingBottomNav';
 
 export default function Home() {
@@ -78,11 +77,6 @@ export default function Home() {
           </a>
         </div>
       </section>
-
-      {/* Pricing Section */}
-      {/* <section id="pricing">
-        <Pricing />
-      </section> */}
 
       {/* How Can I Help You Section */}
       <section id="services" className="container mx-auto px-6 py-16 max-w-2xl">
