@@ -164,7 +164,9 @@ export default function Footer() {
 
         {/* Footer Credits */}
         <div className="flex items-center justify-between pt-8 border-t border-gray-200">
-          <p className="text-gray-600">© 2025 Aman Goyal</p>
+          <p className="text-gray-600">
+            © {new Date().getFullYear()} Aman Goyal
+          </p>
         </div>
       </div>
     </footer>

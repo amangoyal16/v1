@@ -20,21 +20,22 @@ export default function AboutPage() {
           style={{ animationDelay: '0.2s' }}
         >
           <p className="text-gray-700 mb-4">
-            I&apos;m a product and design strategist with 5+ years of experience
-            building products, designing products, and a little bit of
-            developing products too.
+            I&apos;m a product designer with an engineer&apos;s toolkit — 7+
+            years of experience taking products from first wireframe to
+            production code.
           </p>
           <p className="text-gray-700 mb-4">
-            Started my journey with graphic design, then UI design, then
-            development, and now with the help of this whole suite I&apos;m
-            working as a product strategist where I&apos;m helping early-stage
-            founders and teams craft their vision into user-friendly products
-            that people love and actually want to use.
+            I started in UI/UX design, spent four years as a hands-on software
+            engineer building frontends in React and Next.js, and most recently
+            built and led a product &amp; design function serving US and global
+            clients. That path means I don&apos;t hand off designs and hope — I
+            design the system, build it, and own the outcome. (Also: B.Tech in
+            Computer Science, so the engineering side isn&apos;t a hobby.)
           </p>
           <p className="text-gray-700">
-            I helped build products from MVP companies to big scale companies
-            like Shiseido, managing up to 15+ developers and designers at a time
-            across multiple time zones.
+            I&apos;ve helped build products from early-stage MVPs to work for
+            global brands like Shiseido, leading teams of 15+ designers and
+            engineers across multiple time zones.
           </p>
         </section>
 
@@ -137,6 +138,10 @@ export default function AboutPage() {
         </section>
 
         <section className="animate-slideUp" style={{ animationDelay: '0.8s' }}>
+          <p className="text-gray-700 mb-4">
+            I work remotely with teams worldwide, and I&apos;m currently
+            exploring opportunities with Australian product teams.
+          </p>
           <p className="text-gray-700 mb-6">
             If you&apos;re working on something and want to bounce ideas around,
             feel free to reach out.

@@ -14,16 +14,17 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Aman Goyal - Product & Design Strategist | UX/UI Designer',
-    template: '%s | Aman Goyal - Product Design Expert',
+    default: 'Aman Goyal - Product Designer & Frontend Engineer',
+    template: '%s | Aman Goyal - Product Designer',
   },
   description:
-    'Senior freelance product designer & strategist helping startups and SaaS companies design user-centered products. Specialized in MVP design, product redesign, UX audits, and design systems. Based in India, working globally.',
+    'Product designer & frontend engineer with 7+ years of experience helping startups and SaaS companies design and ship user-centered products. Specialized in design systems, MVP design, UX audits, and production-ready React interfaces. Working remotely with teams worldwide.',
   keywords: [
     'product designer',
     'UX designer',
     'UI designer',
-    'design strategist',
+    'frontend engineer',
+    'design engineer',
     'freelance designer',
     'SaaS design',
     'MVP design',
@@ -31,9 +32,8 @@ export const metadata: Metadata = {
     'UX audit',
     'design system',
     'user experience',
-    'product strategy',
+    'React designer',
     'startup design',
-    'India designer',
     'remote designer',
   ],
   authors: [{ name: 'Aman Goyal' }],
@@ -54,26 +54,26 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://amangoyal.design',
-    siteName: 'Aman Goyal - Product Design Expert',
-    title: 'Aman Goyal - Product & Design Strategist | Expert UX/UI Designer',
+    siteName: 'Aman Goyal - Product Designer & Frontend Engineer',
+    title: 'Aman Goyal - Product Designer & Frontend Engineer',
     description:
-      'Senior freelance product designer helping startups design user-centered products. Specialized in MVP design, SaaS redesign, and design systems.',
+      'Product designer & frontend engineer with 7+ years of experience helping startups design and ship user-centered products. Design systems, MVP design, and production-ready React interfaces.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aman Goyal - Product & Design Strategist',
+        alt: 'Aman Goyal - Product Designer & Frontend Engineer',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aman Goyal - Product & Design Strategist',
+    title: 'Aman Goyal - Product Designer & Frontend Engineer',
     description:
-      'Senior freelance product designer helping startups design user-centered products.',
+      'Product designer & frontend engineer with 7+ years of experience helping startups design and ship user-centered products.',
     images: ['/og-image.jpg'],
-    creator: '@amangoyal_design',
+    creator: '@amangoyal676',
   },
   verification: {
     google: 'your-google-verification-code',

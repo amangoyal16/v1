@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-full overflow-hidden flex-shrink-0">
           <Image
             src="/amaninfo.jpg"
-            alt="Aman Goyal - Product & Design Strategist"
+            alt="Aman Goyal - Product Designer & Frontend Engineer"
             fill
             className="object-cover"
             priority
@@ -40,7 +40,7 @@ export default function Hero() {
             Aman Goyal
           </div>
           <p className="text-sm sm:text-base text-gray-600">
-            Product & Design Strategist
+            Product Designer & Frontend Engineer
           </p>
         </div>
       </header>
@@ -85,16 +85,17 @@ export default function Hero() {
             itemType="https://schema.org/description"
           >
             I&apos;m a{' '}
-            <span itemProp="jobTitle">senior freelance product designer</span>{' '}
-            with a passion for creating meaningful digital experiences. I work
-            with{' '}
+            <span itemProp="jobTitle">
+              product designer &amp; frontend engineer
+            </span>{' '}
+            with 7+ years of experience taking products from first wireframe to
+            production code. I work with{' '}
             <span itemProp="serviceType">
               startups and established companies
-            </span>
-            to design products that solve real problems and delight users
-            through{' '}
+            </span>{' '}
+            to design and ship products that solve real problems through{' '}
             <span itemProp="expertise">
-              user-centered design, MVP development, and product strategy
+              user-centered design, design systems, and MVP development
             </span>
             .
           </p>

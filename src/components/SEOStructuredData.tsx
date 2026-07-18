@@ -3,38 +3,39 @@ export function SEOStructuredData() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Aman Goyal',
-    jobTitle: 'Product & Design Strategist',
+    jobTitle: 'Product Designer & Frontend Engineer',
     description:
-      'Senior freelance product designer and strategist helping startups and SaaS companies design user-centered products.',
+      'Product designer and frontend engineer with 7+ years of experience helping startups and SaaS companies design and ship user-centered products.',
     url: 'https://amangoyal.design',
     image: 'https://amangoyal.design/me.png',
     sameAs: [
-      'https://twitter.com/amangoyal_design',
-      'https://linkedin.com/in/amangoyal-design',
-      'https://dribbble.com/amangoyal',
-      'https://github.com/amangoyal',
+      'https://x.com/amangoyal676',
+      'https://www.linkedin.com/in/amangoyal676/',
+      'https://dribbble.com/amangoyal676',
+      'https://peerlist.io/amangoyal676',
     ],
     knowsAbout: [
       'Product Design',
       'UX Design',
       'UI Design',
-      'Design Strategy',
+      'Frontend Development',
+      'React',
+      'Next.js',
       'User Experience',
       'Product Strategy',
       'Design Systems',
       'MVP Design',
       'SaaS Design',
-      'Startup Consulting',
     ],
     hasOccupation: {
       '@type': 'Occupation',
       name: 'Product Designer',
       description:
-        'Designs user-centered products and experiences for startups and SaaS companies',
+        'Designs and builds user-centered products and experiences for startups and SaaS companies',
       skills: [
         'User Experience Design',
         'User Interface Design',
-        'Product Strategy',
+        'Frontend Development',
         'Design Systems',
         'Prototyping',
         'User Research',
@@ -73,18 +74,18 @@ export function SEOStructuredData() {
       url: 'https://amangoyal.design/contact',
     },
     sameAs: [
-      'https://twitter.com/amangoyal_design',
-      'https://linkedin.com/in/amangoyal-design',
+      'https://x.com/amangoyal676',
+      'https://www.linkedin.com/in/amangoyal676/',
     ],
   };
 
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'Website',
-    name: 'Aman Goyal - Product & Design Strategist',
+    name: 'Aman Goyal - Product Designer & Frontend Engineer',
     url: 'https://amangoyal.design',
     description:
-      'Portfolio and services of Aman Goyal, a senior freelance product designer specializing in user-centered design for startups.',
+      'Portfolio and services of Aman Goyal, a product designer and frontend engineer specializing in user-centered design for startups.',
     author: {
       '@type': 'Person',
       name: 'Aman Goyal',
