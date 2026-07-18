@@ -31,8 +31,8 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
             className={fadeInUp(isLoaded)}
             style={{ transitionDelay: getStaggerDelay(index) }}
           >
-            <div
-              // href={`/projects/${project.slug}`}
+            <Link
+              href={`/projects/${project.slug}`}
               className="group cursor-pointer block"
             >
               <div className="space-y-3 sm:space-y-4">
@@ -87,15 +87,15 @@ export default function ProjectsGrid({ maxProjects = 4 }: ProjectsGridProps) {
                   </div>
 
                   {/* Hover indicator */}
-                  {/* <div className="flex items-center text-xs sm:text-sm text-gray-400 group-hover:text-gray-600 transition-colors duration-300 pt-1">
+                  <div className="flex items-center text-xs sm:text-sm text-gray-400 group-hover:text-gray-600 transition-colors duration-300 pt-1">
                     <span>View project</span>
                     <span className="ml-1 transform group-hover:translate-x-1 transition-transform duration-300">
                       →
                     </span>
-                  </div> */}
+                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         ))}
       </div>
